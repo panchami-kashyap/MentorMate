@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MentorMate | Academic Mentoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-left">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <span>MentorMate</span>
+            </div>
+
+            <div class="login-content">
+
+                <h1>
+                    Empowering students through
+                    <span>meaningful mentorship.</span>
+                </h1>
+
+                <p>
+                    Track your academic journey, connect with your mentor,
+                    and achieve your goals with MentorMate.
+                </p>
+
+                <div class="login-features">
+
+                    <div class="feature">
+                        <i data-lucide="chart-no-axes-combined"></i>
+                        <span>Track academic progress</span>
+                    </div>
+
+                    <div class="feature">
+                        <i data-lucide="users"></i>
+                        <span>Connect with mentors</span>
+                    </div>
+
+                    <div class="feature">
+                        <i data-lucide="target"></i>
+                        <span>Achieve your goals</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="login-right">
+
+            <div class="login-card">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+
+                    <span>MentorMate</span>
+                </div>
+
+                <h2>Welcome Back! 👋</h2>
+
+                <p class="login-subtitle">
+                    Sign in to access your mentoring portal.
+                </p>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="username">
+                            Email / USN
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="user"></i>
+
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="Enter your email or USN"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="role">
+                            Login as
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="shield-check"></i>
+
+                            <select id="role" required>
+
+                                <option value="">
+                                    Select your role
+                                </option>
+
+                                <option value="mentee">
+                                    Mentee
+                                </option>
+
+                                <option value="mentor">
+                                    Mentor
+                                </option>
+
+                                <option value="admin">
+                                    Administrator
+                                </option>
+
+                                <option value="hod">
+                                    HOD
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="login-options">
+
+                        <label class="remember-me">
+
+                            <input type="checkbox">
+
+                            <span>Remember me</span>
+
+                        </label>
+
+                        <a href="#">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <button type="submit" class="login-button">
+
+                        <span>Sign In</span>
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <p class="login-help">
+                    Need help? Contact your administrator.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+        <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Configuration -->
+    <script src="firebase.js"></script>
+
+    <!-- Login Functionality -->
+    <script src="script.js"></script>
+
+    <!-- Initialise Icons -->
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

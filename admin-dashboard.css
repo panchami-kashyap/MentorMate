@@ -1,0 +1,1000 @@
+/* ADMIN DASHBOARD — CLEANED CSS
+   Replaces duplicated styling blocks with one consistent set. */
+
+:root {
+    --admin-primary: #6558df;
+    --admin-primary-dark: #5145c7;
+    --admin-text: #293d5b;
+    --admin-muted: #7b8ba5;
+    --admin-bg: #f5f7fc;
+    --admin-border: #e4e9f3;
+    --admin-radius: 18px;
+}
+
+/* ==========================================
+   MAIN DASHBOARD LAYOUT
+   ========================================== */
+
+.admin-main {
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
+    padding: 32px 36px;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: "Poppins", sans-serif;
+}
+
+/* ==========================================
+   WELCOME BANNER
+   ========================================== */
+
+.admin-main .welcome-banner {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 32px 36px;
+    margin: 24px 0;
+    border-radius: 22px;
+    background: linear-gradient(110deg, #6558df, #8b7df0);
+    color: #fff;
+}
+
+.admin-main .welcome-banner h2,
+.admin-main .welcome-banner p {
+    color: #fff;
+}
+
+.admin-main .banner-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 15px;
+    color: #fff;
+}
+
+/* ==========================================
+   DASHBOARD STATISTICS
+   ========================================== */
+
+.admin-main .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.admin-main .stats-grid > * {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(35, 54, 91, 0.025);
+}
+
+.admin-main .stats-grid > * h3 {
+    color: var(--admin-text);
+    font-weight: 500;
+}
+
+.admin-main .stats-grid > * p,
+.admin-main .stats-grid > * span {
+    color: var(--admin-muted);
+}
+
+/* ==========================================
+   CONTENT PANELS
+   ========================================== */
+
+.admin-main .panel {
+    box-sizing: border-box;
+    min-width: 0;
+    margin-bottom: 24px;
+    padding: 28px;
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(35, 54, 91, 0.025);
+}
+
+.admin-main .panel h2 {
+    margin: 0 0 8px;
+    color: var(--admin-text);
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.admin-main .panel > p {
+    color: var(--admin-muted);
+    line-height: 1.7;
+}
+
+/* Section headings */
+
+.admin-main .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   SEARCH FIELD
+   ========================================== */
+
+.admin-main .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.admin-main .search-box input {
+    box-sizing: border-box;
+    width: 260px;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 11px 15px;
+    border: 1px solid #e0e6f1;
+    border-radius: 12px;
+    background: #f8f9fd;
+    color: var(--admin-text);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-main .search-box input:focus {
+    background: #fff;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(101, 88, 223, 0.12);
+}
+
+/* ==========================================
+   STUDENT TABLE
+   ========================================== */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 18px;
+    border: 1px solid var(--admin-border);
+    border-radius: 14px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    font-size: 13px;
+    background: #fff;
+}
+
+.admin-table th {
+    padding: 17px 16px;
+    background: #f6f8fc;
+    color: #74839d;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-table td {
+    padding: 18px 16px;
+    color: var(--admin-text);
+    font-size: 13px;
+    border-bottom: 1px solid #edf0f6;
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafbff;
+}
+
+/* Student name and avatar */
+
+.admin-student-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 190px;
+}
+
+.admin-student-avatar {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #eeeaff;
+    color: var(--admin-primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-student-name strong {
+    display: block;
+    color: var(--admin-text);
+    font-size: 13px;
+}
+
+.admin-student-name small {
+    display: block;
+    margin-top: 5px;
+    color: #8592a8;
+    font-size: 11px;
+}
+
+/* View details button */
+
+.admin-view-button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 11px;
+    background: var(--admin-primary);
+    color: #fff;
+    font: 500 13px "Poppins", sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-view-button:hover {
+    background: var(--admin-primary-dark);
+    transform: translateY(-1px);
+}
+
+.admin-empty {
+    padding: 25px !important;
+    color: #8592a8 !important;
+    text-align: center;
+}
+
+.admin-note {
+    margin-top: 14px;
+    color: var(--admin-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   MENTOR MANAGEMENT
+   ========================================== */
+
+.admin-info-card {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 26px;
+    border: 1px solid var(--admin-border);
+    border-radius: 18px;
+    background: #fff;
+}
+
+.admin-info-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #eeeaff;
+    color: var(--admin-primary);
+}
+
+.admin-info-card h3 {
+    margin: 0 0 9px;
+    color: var(--admin-text);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.admin-info-card p {
+    margin: 0 0 18px;
+    color: var(--admin-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.admin-info-card .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 17px;
+    border-radius: 11px;
+    background: var(--admin-primary);
+    color: #fff;
+    font: 500 13px "Poppins", sans-serif;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.admin-info-card .primary-button:hover {
+    background: var(--admin-primary-dark);
+}
+
+/* ==========================================
+   ACADEMIC RECORD CARDS
+   ========================================== */
+
+.admin-record-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.admin-record-card {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid var(--admin-border);
+    border-radius: 17px;
+    background: #fff;
+}
+
+.admin-record-card span {
+    color: var(--admin-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.admin-record-card h3 {
+    margin: 12px 0 0;
+    color: var(--admin-text);
+    font-size: 29px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   RECENT ACTIVITY
+   ========================================== */
+
+.admin-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.admin-activity-item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.admin-activity-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #eeeaff;
+    color: var(--admin-primary);
+}
+
+.admin-activity-item h3 {
+    margin: 0 0 7px;
+    color: var(--admin-text);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.admin-activity-item p {
+    margin: 0;
+    color: var(--admin-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.admin-activity-item time {
+    display: block;
+    margin-top: 8px;
+    color: #929db0;
+    font-size: 12px;
+}
+
+/* ==========================================
+   STUDENT DETAIL STATISTICS
+   ========================================== */
+
+.admin-detail-stat {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.admin-detail-stat article {
+    padding: 15px;
+    border: 1px solid #e8edf5;
+    border-radius: 12px;
+    background: #f6f8fc;
+}
+
+.admin-detail-stat span {
+    display: block;
+    color: var(--admin-muted);
+    font-size: 12px;
+}
+
+.admin-detail-stat strong {
+    display: block;
+    margin-top: 7px;
+    color: var(--admin-text);
+    font-size: 19px;
+}
+
+/* ==========================================
+   SIDEBAR LINKS
+   ========================================== */
+
+.sidebar a,
+.sidebar nav a,
+aside a {
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar .nav-item,
+.sidebar .portal-link,
+.sidebar nav a {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.sidebar .nav-item:hover,
+.sidebar .portal-link:hover,
+.sidebar nav a:hover {
+    text-decoration: none;
+}
+
+/* ==========================================
+   STUDENT DETAILS MODAL
+   ========================================== */
+
+.detail-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.6);
+    overflow-y: auto;
+}
+
+.detail-modal.active {
+    display: flex;
+}
+
+.detail-dialog {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 750px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: sticky;
+    float: right;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 9px;
+    background: #f0efff;
+    color: #5549c4;
+    cursor: pointer;
+}
+
+.detail-dialog h2 {
+    margin: 8px 0;
+    color: var(--admin-text);
+}
+
+.detail-subtitle {
+    margin-bottom: 24px;
+    color: var(--admin-muted);
+    font-size: 13px;
+}
+
+.detail-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--admin-border);
+    border-radius: 14px;
+}
+
+.detail-section h3 {
+    margin: 0 0 14px;
+    color: var(--admin-primary);
+    font-size: 16px;
+}
+
+.detail-section p {
+    margin: 8px 0;
+    color: #353950;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.detail-record {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f6f8fc;
+}
+
+.detail-record strong {
+    color: var(--admin-text);
+    font-size: 13px;
+}
+
+.detail-content {
+    clear: both;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1100px) {
+    .admin-main {
+        padding: 26px;
+    }
+
+    .admin-main .stats-grid,
+    .admin-record-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-main {
+        padding: 16px;
+    }
+
+    .admin-main .panel {
+        padding: 19px;
+        border-radius: 16px;
+    }
+
+    .admin-main .panel h2 {
+        font-size: 22px;
+    }
+
+    .admin-main .stats-grid,
+    .admin-record-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .admin-main .welcome-banner {
+        padding: 22px;
+    }
+
+    .admin-main .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-main .search-box,
+    .admin-main .search-box input {
+        width: 100%;
+    }
+
+    .admin-info-card {
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .admin-detail-stat {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-activity-item {
+        padding: 16px;
+    }
+
+    .detail-modal {
+        padding: 10px;
+    }
+
+    .detail-dialog {
+        padding: 18px;
+        max-height: 95vh;
+    }
+
+    .admin-main .page-footer {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================
+   ADMIN DASHBOARD HEADER ALIGNMENT
+   ========================================== */
+
+.admin-main > header,
+.admin-main .page-header,
+.admin-main .dashboard-header {
+    position: relative;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.admin-main .page-header h1,
+.admin-main .dashboard-header h1 {
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.admin-main .page-header p,
+.admin-main .dashboard-header p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Keep the small dashboard icon aligned */
+.admin-main .page-icon,
+.admin-main .header-icon,
+.admin-main .dashboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background: #e0ebff;
+    color: #2864f0;
+}
+
+/* ==========================================
+   ADMIN DASHBOARD HEADER — ALIGNMENT FIX
+   ========================================== */
+
+.admin-main .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.admin-main .topbar > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-main .topbar .eyebrow {
+    margin: 0 0 10px;
+    color: #293d5b;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.admin-main .topbar h1 {
+    margin: 0 0 8px;
+    color: #293d5b;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-main .topbar .subheading {
+    margin: 0;
+    color: #293d5b;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.admin-main .topbar .mentor-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    background: #e0ebff;
+    color: #2864f0;
+}
+
+.admin-main .topbar .mentor-avatar svg {
+    width: 27px;
+    height: 27px;
+    stroke-width: 2;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .admin-main .topbar {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .admin-main .topbar h1 {
+        font-size: 28px;
+    }
+
+    .admin-main .topbar .subheading {
+        font-size: 15px;
+    }
+
+    .admin-main .topbar .eyebrow {
+        font-size: 13px;
+    }
+
+    .admin-main .topbar .mentor-avatar {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+}
+
+/* ==========================================
+   SIDEBAR PORTAL LINKS — MATCH MAIN MENU
+   ========================================== */
+
+/* Make portal links look like normal sidebar items */
+.sidebar-nav > a.portal-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    margin: 4px 0;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #647792;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none !important;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar-nav > a.portal-link i,
+.sidebar-nav > a.portal-link svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    stroke-width: 1.8;
+}
+
+.sidebar-nav > a.portal-link span {
+    display: inline-block;
+}
+
+.sidebar-nav > a.portal-link:hover {
+    background: #eef3ff;
+    color: #3568ee;
+    text-decoration: none !important;
+    box-shadow: none;
+}
+
+/* Keep the PORTALS heading consistent */
+.sidebar-nav .second-title {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+/* Keep logout styling unchanged */
+.sidebar-nav > a.logout {
+    color: #ff4545;
+}
+
+.sidebar-nav > a.logout:hover {
+    background: #fff0f0;
+    color: #e53939;
+}
+
+/* ==========================================
+   ADMIN HEADER — MATCH MENTOR DASHBOARD
+   ========================================== */
+
+.admin-main .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin-main .topbar > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-main .topbar .eyebrow {
+    margin: 0 0 12px;
+    color: #6558df;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.admin-main .topbar h1 {
+    margin: 0 0 10px;
+    color: #263b59;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.admin-main .topbar .subheading {
+    margin: 0;
+    color: #7b8ba5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.admin-main .topbar .mentor-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 17px;
+    background: #eeeaff;
+    color: #6558df;
+}
+
+.admin-main .topbar .mentor-avatar svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Keep the banner close to the header */
+.admin-main .welcome-banner {
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 700px) {
+    .admin-main .topbar {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .admin-main .topbar h1 {
+        font-size: 28px;
+    }
+
+    .admin-main .topbar .subheading {
+        font-size: 14px;
+    }
+
+    .admin-main .topbar .mentor-avatar {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ==========================================
+   ADMIN SIDEBAR — MATCH MENTOR DASHBOARD
+   ========================================== */
+
+.sidebar-nav > a.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.sidebar-nav > a.nav-item span {
+    min-width: 0;
+}
+
+.sidebar-nav > a.portal-link {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.sidebar-nav > a.nav-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-nav > a.nav-item:not(.active):not(.logout) {
+    color: #647792;
+}
+
+.sidebar-nav > a.nav-item:not(.active):not(.logout):hover {
+    background: #eef3ff;
+    color: #3568ee;
+}
+
+.sidebar-nav > a.nav-item.active {
+    background: #eef4ff;
+    color: #2864f0;
+}
+
+.sidebar-nav > a.nav-item.logout {
+    color: #ff4545;
+}
+
+.sidebar-nav > a.nav-item.logout:hover {
+    background: #fff0f0;
+}
+
+/* Keep the portal section spaced consistently */
+.sidebar-nav .second-title {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}

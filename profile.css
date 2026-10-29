@@ -1,0 +1,801 @@
+/* =========================================
+   MENTORMATE - PROFILE PAGE
+   ========================================= */
+
+
+/* =========================================
+   PROFILE HEADER
+   ========================================= */
+
+.profile-header-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 24px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.large-profile-avatar {
+    width: 78px;
+    height: 78px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    flex-shrink: 0;
+}
+
+
+.profile-main-info {
+    flex: 1;
+}
+
+
+.profile-main-info h2 {
+    font-size: 20px;
+
+    color: var(--dark);
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+.profile-main-info > p {
+    font-size: 11px;
+
+    color: var(--muted);
+
+    margin-bottom: 11px;
+}
+
+
+.profile-tags {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.profile-tags span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    color: var(--muted);
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+}
+
+
+.profile-tags svg {
+    width: 12px;
+    height: 12px;
+}
+
+
+.profile-tags .verified-tag {
+    background: #f0fdf4;
+
+    border-color: #bbf7d0;
+
+    color: #15803d;
+}
+
+
+/* =========================================
+   EDIT PROFILE BUTTON
+   ========================================= */
+
+.edit-profile-button {
+    height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.edit-profile-button:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    background: #eff6ff;
+}
+
+
+.edit-profile-button svg {
+    width: 14px;
+}
+
+
+/* =========================================
+   PROFILE SECTION CARD
+   ========================================= */
+
+.profile-section-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 23px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+
+.section-heading h3 {
+    font-size: 14px;
+
+    color: var(--dark);
+
+    font-weight: 600;
+}
+
+
+.section-heading p {
+    font-size: 9px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+
+.section-heading > svg {
+    width: 19px;
+
+    color: var(--primary);
+}
+
+
+/* =========================================
+   PROFILE INFORMATION GRID
+   ========================================= */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 25px;
+
+    row-gap: 18px;
+}
+
+
+.profile-field {
+    min-width: 0;
+}
+
+
+.profile-field label {
+    display: block;
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+    margin-bottom: 6px;
+
+    font-weight: 500;
+}
+
+
+.field-value {
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #edf1f5;
+
+    border-radius: 7px;
+
+    color: var(--dark);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ACADEMIC SUMMARY
+   ========================================= */
+
+.academic-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+
+.academic-box {
+    padding: 16px;
+
+    background: #f8fafc;
+
+    border: 1px solid #edf1f5;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.academic-box span {
+    font-size: 9px;
+
+    color: var(--muted);
+}
+
+
+.academic-box strong {
+    font-size: 21px;
+
+    color: var(--dark);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TWO COLUMN SECTION
+   ========================================= */
+
+.profile-two-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.profile-two-column .profile-section-card {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   SKILL TAGS
+   ========================================= */
+
+.skill-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.skill-tags span {
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+   ========================================= */
+
+.achievement-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.achievement-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border: 1px solid #edf1f5;
+
+    border-radius: 9px;
+}
+
+
+.achievement-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #fef3c7;
+
+    color: #d97706;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.achievement-icon svg {
+    width: 18px;
+}
+
+
+.achievement-item > div:nth-child(2) {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.achievement-item strong {
+    font-size: 10px;
+
+    color: var(--dark);
+
+    font-weight: 600;
+}
+
+
+.achievement-item span:not(.verified-badge) {
+    font-size: 8px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+
+.verified-badge {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 8px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   PROFILE ACTIONS
+   ========================================= */
+
+.profile-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+.cancel-button,
+.save-button {
+    height: 40px;
+
+    padding: 0 17px;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.cancel-button {
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    color: var(--muted);
+}
+
+
+.save-button {
+    border: none;
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+.save-button:hover {
+    background: var(--primary-dark);
+}
+
+
+.save-button svg {
+    width: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .academic-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-two-column {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profile-header-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .profile-main-info {
+        width: calc(100% - 96px);
+    }
+
+    .edit-profile-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .achievement-item {
+        align-items: flex-start;
+    }
+
+    .verified-badge {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   EDIT PROFILE MODAL
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Container */
+
+.profile-modal {
+    width: 100%;
+    max-width: 760px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+    transform: translateY(12px) scale(0.98);
+    transition: 0.2s ease;
+}
+
+.modal-overlay.show .profile-modal {
+    transform: translateY(0) scale(1);
+}
+
+/* Modal Header */
+
+.modal-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 2;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.modal-header p {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* Close Button */
+
+.modal-close {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    border-radius: 8px;
+    color: #64748b;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.modal-close svg {
+    width: 16px;
+}
+
+/* Modal Sections */
+
+.modal-section {
+    padding: 22px 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.modal-section h3 {
+    font-size: 14px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Form Grid */
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Input Fields */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group.full-width {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 11px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input,
+.input-group select {
+    height: 40px;
+    padding: 0 11px;
+}
+
+.input-group textarea {
+    min-height: 85px;
+    padding: 10px 11px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Input Focus */
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Modal Footer */
+
+.modal-actions {
+    padding: 18px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background: #f8fafc;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+
+    .modal-overlay {
+        padding: 12px;
+    }
+
+    .profile-modal {
+        max-height: 94vh;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-header,
+    .modal-section,
+    .modal-actions {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}

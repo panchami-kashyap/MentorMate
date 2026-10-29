@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MentorMate | Mentor Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="mentor-dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div class="dashboard-container">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon"><i data-lucide="graduation-cap"></i></div>
+      <div><h2>MentorMate</h2><span>Mentor Portal</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="nav-title">MAIN MENU</p>
+      <a href="mentor-dashboard.html" class="nav-item active"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a href="#mentees" class="nav-item"><i data-lucide="users"></i><span>Mentees</span></a>
+      <a href="#feedback" class="nav-item"><i data-lucide="message-square"></i><span>Mentor Feedback</span></a>
+      <p class="nav-title second-title">STUDENT PORTAL</p>
+      <a href="mentee-dashboard.html" class="nav-item"><i data-lucide="external-link"></i><span>Mentee Portal</span></a>
+      <a href="index.html" class="nav-item logout"><i data-lucide="log-out"></i><span>Logout</span></a>
+    </nav>
+    <div class="sidebar-footer"><span class="status-dot"></span> Mentor view</div>
+  </aside>
+
+  <main class="main-content mentor-main">
+    <header class="topbar">
+      <div><p class="eyebrow">MENTOR PORTAL</p><h1>Mentor Dashboard</h1><p class="subheading">Review your mentees' progress and records.</p></div>
+      <div class="mentor-avatar"><i data-lucide="user-round"></i></div>
+    </header>
+
+    <section class="welcome-banner">
+      <div><p class="banner-label">MENTOR OVERVIEW</p><h2>Student progress, all in one place.</h2><p>Information is read from the records saved in this browser.</p></div>
+      <div class="banner-icon"><i data-lucide="graduation-cap"></i></div>
+    </section>
+
+    <section class="stats-grid" aria-label="Mentee summary">
+      <article class="stat-card"><div class="stat-icon blue"><i data-lucide="users"></i></div><div><p>Total mentees</p><h2 id="menteeCount">0</h2></div></article>
+      <article class="stat-card"><div class="stat-icon purple"><i data-lucide="book-open"></i></div><div><p>Semesters recorded</p><h2 id="semesterCount">0</h2></div></article>
+      <article class="stat-card"><div class="stat-icon green"><i data-lucide="award"></i></div><div><p>Achievements</p><h2 id="achievementCount">0</h2></div></article>
+      <article class="stat-card"><div class="stat-icon orange"><i data-lucide="calendar-check"></i></div><div><p>Overall attendance</p><h2 id="overallAttendance">—</h2></div></article>
+    </section>
+
+    <section class="panel" id="mentees">
+      <div class="section-heading"><div><h2>My Mentees</h2><p>Student information available in this browser</p></div>
+        <label class="search-box"><i data-lucide="search"></i><input id="menteeSearch" type="search" placeholder="Search by name or USN..." aria-label="Search mentees"></label>
+      </div>
+      <div id="menteeGrid" class="mentee-grid"></div>
+      <div id="emptyMentees" class="empty-state" hidden><i data-lucide="users"></i><h3>No mentee profile found</h3><p>Open the Mentee Portal and save a profile to see its information here.</p><a class="primary-button" href="mentee-profile.html">Open mentee profile</a></div>
+    </section>
+
+    <section class="panel" id="feedback">
+      <div class="section-heading"><div><h2>Mentor Notes</h2><p>Quick notes saved locally for this prototype</p></div></div>
+      <form id="noteForm" class="note-form">
+        <label for="mentorNote">Feedback or recommendation</label>
+        <textarea id="mentorNote" rows="3" placeholder="Write a recommendation or follow-up note..." required></textarea>
+        <div class="note-actions"><small id="noteStatus">Notes are saved in this browser.</small><button class="primary-button" type="submit"><i data-lucide="save"></i> Save note</button></div>
+      </form>
+      <div id="notesList" class="notes-list"></div>
+    </section>
+
+    <footer class="page-footer">MentorMate · Mentor Portal <span>Local browser prototype</span></footer>
+  </main>
+</div>
+
+<div id="menteeModal" class="detail-modal" aria-hidden="true">
+  <div class="detail-dialog" role="dialog" aria-modal="true" aria-labelledby="detailName">
+    <button type="button" class="modal-close" id="closeDetail" aria-label="Close details"><i data-lucide="x"></i></button>
+    <p class="eyebrow">MENTEE PROFILE</p><h2 id="detailName">Student details</h2><p id="detailSubtitle" class="detail-subtitle"></p>
+    <div id="detailContent" class="detail-content"></div>
+  </div>
+</div>
+<script src="mentor-dashboard.js"></script>
+</body>
+</html>

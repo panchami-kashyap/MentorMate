@@ -1,0 +1,134 @@
+/* MentorMate mentor dashboard */
+.mentor-main{flex:1;min-width:0;padding:30px 34px;background:#f7f8fc;min-height:100vh;color:#20243a}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.topbar h1{font-size:28px;margin:2px 0 5px}.eyebrow{font-size:11px;letter-spacing:1.5px;font-weight:700;color:#6d63d9;margin:0 0 5px}.subheading{margin:0;color:#777e91;font-size:13px}.mentor-avatar{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#e9e7ff;color:#6258ca}
+.welcome-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 30px;border-radius:20px;background:linear-gradient(115deg,#635bce,#8b80ec);color:white;margin-bottom:22px}.banner-label{font-size:10px;letter-spacing:1.5px;font-weight:700;opacity:.8}.welcome-banner h2{font-size:21px;margin:0 0 7px}.welcome-banner p{font-size:13px}.banner-icon{width:66px;height:66px;border:1px solid #ffffff55;background:#ffffff1b;border-radius:20px;display:grid;place-items:center}
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:22px}.stat-card{background:white;border:1px solid #eef0f6;border-radius:16px;padding:19px;display:flex;align-items:center;gap:13px}.stat-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center}.blue{background:#e8efff;color:#4d75d8}.purple{background:#eeeaff;color:#7764d5}.green{background:#e2f8ed;color:#229967}.orange{background:#fff0df;color:#d9872c}.stat-card p{margin:0 0 4px;font-size:12px;color:#7d8294}.stat-card h2{margin:0;font-size:24px}
+.panel{background:white;border:1px solid #edf0f6;border-radius:18px;padding:24px;margin-bottom:22px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:20px}.section-heading h2{margin:0 0 4px;font-size:18px}.section-heading p{margin:0;color:#85899a;font-size:12px}.search-box{display:flex;align-items:center;gap:8px;border:1px solid #e5e7ef;border-radius:11px;padding:0 12px;min-width:245px}.search-box input{border:0;outline:0;padding:11px 0;width:100%;font:inherit;font-size:12px}
+.mentee-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.mentee-card{border:1px solid #eceef5;border-radius:15px;padding:18px}.student-card-head{display:flex;gap:12px;align-items:center;margin-bottom:16px}.student-avatar{width:46px;height:46px;border-radius:14px;background:#efedff;color:#665bd0;display:grid;place-items:center;font-weight:700}.student-card-head h3{font-size:15px;margin:0 0 4px}.student-card-head p{font-size:11px;color:#81869a;margin:0}.student-pill{margin-left:auto;font-size:10px;background:#e9f8f0;color:#23875b;padding:6px 9px;border-radius:20px}.student-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:16px}.student-metric{background:#f8f9fc;border-radius:10px;padding:11px}.student-metric span{display:block;font-size:10px;color:#83889b;margin-bottom:5px}.student-metric strong{font-size:16px}.student-card-actions{display:flex;gap:9px;flex-wrap:wrap}
+.primary-button,.secondary-button{border:0;border-radius:10px;padding:10px 13px;display:inline-flex;align-items:center;justify-content:center;gap:7px;font:inherit;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none}.primary-button{background:#675ed0;color:white}.secondary-button{background:#f0efff;color:#5d53c0}.empty-state{text-align:center;padding:30px 15px;color:#82879a}.note-form label,.recommendation-form label{display:block;font-size:12px;font-weight:600;margin:10px 0 7px}.note-form textarea,.recommendation-form textarea,.recommendation-form input,.recommendation-form select{box-sizing:border-box;width:100%;border:1px solid #e4e6ef;border-radius:10px;padding:11px 12px;font:inherit;font-size:12px;background:white}.note-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}.note-actions small{font-size:11px;color:#85899a}.notes-list,.mentor-recommendations-list{display:grid;gap:10px;margin-top:16px}.note-item,.mentor-recommendation-item{padding:13px 15px;border:1px solid #eceef5;border-radius:12px;display:flex;justify-content:space-between;gap:15px}.note-item p,.mentor-recommendation-item p{font-size:12px;line-height:1.6;margin:0 0 6px;white-space:pre-wrap;overflow-wrap:anywhere}.note-item time,.recommendation-item-meta{display:block;font-size:10px;color:#888da0;margin-top:6px}.delete-note,.recommendation-item-actions button{border:0;background:transparent;cursor:pointer}.delete-note{color:#b64c61}.recommendation-item-actions{display:flex;gap:6px;flex-wrap:wrap}.recommendation-item-actions button{border-radius:8px;padding:7px 9px;font-size:11px;background:#efedff;color:#5e53c3}.recommendation-item-actions [data-action=delete]{background:#fff0f1;color:#b83d52}.page-footer{display:flex;justify-content:space-between;color:#989cad;font-size:10px;padding:4px 2px 18px}
+.detail-modal{display:none;position:fixed;inset:0;z-index:1000;background:#17172e80;align-items:center;justify-content:center;padding:20px}.detail-modal.active {
+    display: flex;
+}.detail-dialog{position:relative;background:#fff;border-radius:20px;width:min(650px,100%);max-height:85vh;overflow:auto;padding:28px}.modal-close{position:absolute;right:18px;top:18px;border:0;background:#f2f2f8;border-radius:9px;padding:8px;cursor:pointer}.detail-dialog h2{margin:0 35px 5px}.detail-subtitle{color:#83889b;font-size:12px}.detail-content{display:grid;gap:12px}.detail-section{border:1px solid #eceef5;border-radius:12px;padding:15px}.detail-section h3{font-size:13px}.detail-section p,.detail-section li{font-size:12px;line-height:1.7}.sidebar-footer{padding:18px 22px;color:#85899a;font-size:11px}.status-dot{display:inline-block;width:7px;height:7px;background:#37b879;border-radius:50%;margin-right:7px}
+@media(max-width:1100px){.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.mentor-main{padding:20px 14px}.stats-grid,.mentee-grid{grid-template-columns:1fr}.panel{padding:17px}.section-heading{align-items:stretch;flex-direction:column}.search-box{min-width:0}.note-actions{align-items:flex-start;flex-direction:column}.mentor-recommendation-item{flex-direction:column}}
+/* ========================================
+   MENTEE PROGRESS OVERVIEW
+======================================== */
+
+.progress-overview {
+    margin-top: 22px;
+}
+
+.progress-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #e8f8ef;
+    color: #23875b;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.progress-live-badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2eae72;
+}
+
+.progress-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.progress-overview-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #eceef5;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.progress-overview-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.progress-overview-icon.academic {
+    background: #eeeaff;
+    color: #7162d4;
+}
+
+.progress-overview-icon.attendance {
+    background: #e2f8ed;
+    color: #229967;
+}
+
+.progress-overview-icon.achievements {
+    background: #fff0df;
+    color: #d9872c;
+}
+
+.progress-overview-icon.recommendations {
+    background: #e8efff;
+    color: #4d75d8;
+}
+
+.progress-overview-label {
+    color: #7d8294;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.progress-overview-card h3 {
+    margin: 7px 0;
+    color: #20243a;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.progress-overview-card p {
+    margin: 5px 0 0;
+    color: #85899a;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.progress-track {
+    height: 7px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #eef0f6;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #675ed0, #958aef);
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+    .progress-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .progress-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-live-badge {
+        align-self: flex-start;
+    }
+}

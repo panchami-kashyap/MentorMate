@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MentorMate | Mentee Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="mentee-dashboard-additional.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+     ========================================= -->
+
+<div class="dashboard-container">
+
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-logo-icon">
+
+                <i data-lucide="graduation-cap"></i>
+
+            </div>
+
+            <div>
+
+                <h2>MentorMate</h2>
+
+                <span>Student Portal</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+
+            <a href="#" class="nav-item active">
+
+                <i data-lucide="layout-dashboard"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="mentee-profile.html" class="nav-item">
+
+                <i data-lucide="user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+            <a href="academic-records.html" class="nav-item">
+    <i data-lucide="book-open"></i>
+    <span>Academic Records</span>
+</a>
+
+
+            <a href="attendance.html" class="nav-item">
+    <i data-lucide="calendar-check"></i>
+    <span>Attendance</span>
+</a>
+
+
+            <a href="achievements.html" class="nav-item">
+    <i data-lucide="award"></i>
+    <span>Achievements</span>
+</a>
+
+
+            <p class="nav-title second-title">
+                MENTORING
+            </p>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="message-square"></i>
+
+                <span>Mentor Feedback</span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="target"></i>
+
+                <span>Recommendations</span>
+
+            </a>
+
+
+            <p class="nav-title second-title">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="settings"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <a href="index.html" class="nav-item logout">
+
+                <i data-lucide="log-out"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- User mini profile -->
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                PK
+            </div>
+
+            <div class="user-info">
+
+                <strong>Panchami Kashyap</strong>
+
+                <span>Mentee</span>
+
+            </div>
+
+            <i data-lucide="more-vertical"></i>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+
+
+            <div class="mobile-menu">
+
+                <i data-lucide="menu"></i>
+
+            </div>
+
+
+            <div class="header-title">
+
+                <h1>Dashboard</h1>
+
+                <p id="dashboardDate"></p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+
+                <button class="notification-button">
+
+                    <i data-lucide="bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="header-avatar">
+                        PK
+                    </div>
+
+                    <div>
+
+                        <strong>Panchami Kashyap</strong>
+
+                        <span>ISE • 5th Semester</span>
+
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             PAGE CONTENT
+             ========================================= -->
+
+        <section class="page-content">
+
+
+            <!-- Welcome Banner -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <p class="welcome-small">
+                        Welcome back 👋
+                    </p>
+
+                    <h2>
+                        Good morning, Panchami!
+                    </h2>
+
+                    <p>
+                        Here's an overview of your academic progress
+                        and mentoring activities.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    <i data-lucide="graduation-cap"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 STAT CARDS
+                 ========================================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- CGPA -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+
+                            <i data-lucide="graduation-cap"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Current CGPA
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="currentCGPA">--</h3>
+
+                    <div class="stat-bottom">
+
+                        <span class="positive">
+                            <i data-lucide="trending-up"></i>
+                            0.15
+                        </span>
+
+                        <span>
+                            from last semester
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Attendance -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+
+                            <i data-lucide="calendar-check"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Attendance
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="currentAttendance">--</h3>
+
+                    <div class="stat-bottom">
+
+                        <span class="positive">
+                            <i data-lucide="trending-up"></i>
+                            3%
+                        </span>
+
+                        <span>
+                            this semester
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Achievements -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+
+                            <i data-lucide="award"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Achievements
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="achievementCount">--</h3>
+
+                    <div class="stat-bottom">
+
+                        <span class="verified" id="verifiedAchievements">
+                            0 verified
+                        </span>
+
+                        <span>
+                            achievements
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Mentor -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon purple">
+
+                            <i data-lucide="user-round-check"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            My Mentor
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="mentor-name" id="mentorName">
+    Mentor not assigned
+</h3>
+
+                    <div class="stat-bottom">
+
+                        <span class="online-status">
+                            <span></span>
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 MAIN DASHBOARD GRID
+                 ========================================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- Academic Performance -->
+
+                <div class="dashboard-card academic-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Academic Performance
+                            </h3>
+
+                            <p>
+                                Semester-wise SGPA progress
+                            </p>
+
+                        </div>
+
+
+                        <button class="view-button" onclick="window.location.href='academic-records.html'">
+    View Records
+    <i data-lucide="arrow-up-right"></i>
+</button>
+
+                    </div>
+
+
+                    <!-- Simple chart -->
+
+                    <div class="chart-container">
+
+
+                        <div class="chart-y-axis">
+
+                            <span>10</span>
+                            <span>8</span>
+                            <span>6</span>
+                            <span>4</span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+
+                            <div class="chart-grid-line line-1"></div>
+                            <div class="chart-grid-line line-2"></div>
+                            <div class="chart-grid-line line-3"></div>
+
+
+                            <svg
+                                class="performance-chart"
+                                viewBox="0 0 500 200"
+                                preserveAspectRatio="none"
+                            >
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="chartGradient"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1"
+                                    >
+
+                                        <stop
+                                            offset="0%"
+                                            stop-color="#2563eb"
+                                            stop-opacity="0.25"
+                                        />
+
+                                        <stop
+                                            offset="100%"
+                                            stop-color="#2563eb"
+                                            stop-opacity="0"
+                                        />
+
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    d="M 20 100
+                                       L 130 75
+                                       L 240 62
+                                       L 350 50
+                                       L 460 35
+                                       L 480 35
+                                       L 480 200
+                                       L 20 200 Z"
+                                    fill="url(#chartGradient)"
+                                />
+
+
+                                <path
+                                    d="M 20 100
+                                       L 130 75
+                                       L 240 62
+                                       L 350 50
+                                       L 460 35"
+                                    fill="none"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+
+
+                                <circle
+                                    cx="20"
+                                    cy="100"
+                                    r="5"
+                                    fill="#ffffff"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                />
+
+                                <circle
+                                    cx="130"
+                                    cy="75"
+                                    r="5"
+                                    fill="#ffffff"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                />
+
+                                <circle
+                                    cx="240"
+                                    cy="62"
+                                    r="5"
+                                    fill="#ffffff"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                />
+
+                                <circle
+                                    cx="350"
+                                    cy="50"
+                                    r="5"
+                                    fill="#ffffff"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                />
+
+                                <circle
+                                    cx="460"
+                                    cy="35"
+                                    r="5"
+                                    fill="#ffffff"
+                                    stroke="#2563eb"
+                                    stroke-width="3"
+                                />
+
+                            </svg>
+
+
+                            <div class="chart-labels">
+
+                                <span>Sem 1</span>
+                                <span>Sem 2</span>
+                                <span>Sem 3</span>
+                                <span>Sem 4</span>
+                                <span>Sem 5</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Mentor Feedback -->
+
+                <div class="dashboard-card feedback-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Latest Mentor Feedback
+                            </h3>
+
+                            <p>
+                                From your mentor
+                            </p>
+
+                        </div>
+
+                        <i
+                            data-lucide="message-circle"
+                            class="header-card-icon"
+                        ></i>
+
+                    </div>
+
+
+                    <div class="mentor-info">
+
+<div class="mentor-avatar">MM</div>
+
+<div>
+    <strong>Your Mentor</strong>
+    <span id="feedbackDate">No feedback yet</span>
+</div>
+
+</div>
+
+<div id="latestFeedback">
+
+<p class="feedback-text">
+    No feedback received yet.
+</p>
+
+</div>
+
+<button class="text-button" id="viewAllFeedback">
+
+View All Feedback
+
+<i data-lucide="arrow-right"></i>
+
+</button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 LOWER DASHBOARD GRID
+                 ========================================= -->
+
+            <div class="dashboard-grid lower-grid">
+
+
+<!-- Recommendations -->
+
+<div class="dashboard-card">
+
+    <div class="card-header">
+
+        <div>
+            <h3>Mentor Recommendations</h3>
+            <p>Things you should work on</p>
+        </div>
+
+    </div>
+
+    <!-- Recommendations will load dynamically -->
+    <div id="recommendationList" class="recommendation-list"></div>
+
+</div>
+
+
+<!-- Recent Activity -->
+
+<div class="dashboard-card">
+
+    <div class="card-header">
+
+        <div>
+            <h3>Recent Activity</h3>
+            <p>Your latest updates</p>
+        </div>
+
+    </div>
+
+    <!-- Recent activities will load dynamically -->
+    <div id="recentActivityList" class="activity-list"></div>
+
+</div>
+</section>
+</main>
+</div>
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- Your existing Firebase configuration -->
+<script src="firebase.js"></script>
+<script>
+    // ========================================
+    // MENTEE DASHBOARD SUMMARY
+    // ========================================
+
+    // ========================================
+// LOAD MENTEE DASHBOARD DATA FROM FIRESTORE
+// ========================================
+
+// ========================================
+// LOAD MENTEE DASHBOARD DATA FROM FIRESTORE
+// ========================================
+
+async function updateMenteeDashboard(student) {
+    const user = firebase.auth().currentUser;
+
+    if (!user || !student) {
+        console.error("Mentee authentication or profile is missing.");
+        return;
+    }
+
+    try {
+        // ----------------------------------------
+        // DATE
+        // ----------------------------------------
+
+        const dateElement = document.getElementById("dashboardDate");
+
+        if (dateElement) {
+            dateElement.textContent = new Date().toLocaleDateString(
+                "en-IN",
+                {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+        }
+
+        // ----------------------------------------
+        // STUDENT PROFILE AND CGPA
+        // ----------------------------------------
+
+        const cgpaElement = document.getElementById("currentCGPA");
+
+        if (cgpaElement) {
+            const cgpa = Number(student.cgpa);
+
+            cgpaElement.textContent =
+                student.cgpa !== undefined &&
+                student.cgpa !== null &&
+                student.cgpa !== "" &&
+                Number.isFinite(cgpa)
+                    ? cgpa.toFixed(2)
+                    : "N/A";
+        }
+
+        // ----------------------------------------
+        // MENTOR
+        // ----------------------------------------
+
+        const mentorElement = document.getElementById("mentorName");
+
+        if (mentorElement) {
+            mentorElement.textContent = student.mentorId
+                ? "Mentor assigned"
+                : "Mentor not assigned";
+        }
+
+        // ----------------------------------------
+        // ATTENDANCE
+        // ----------------------------------------
+
+        const attendanceDoc = await db
+            .collection("attendanceRecords")
+            .doc(user.uid)
+            .get();
+
+        let attended = 0;
+        let total = 0;
+
+        if (attendanceDoc.exists) {
+            const records = attendanceDoc.data().records || [];
+
+            records.forEach(record => {
+                attended += Number(record.attended) || 0;
+                total += Number(record.total) || 0;
+            });
+        }
+
+        const attendanceElement =
+            document.getElementById("currentAttendance");
+
+        if (attendanceElement) {
+            attendanceElement.textContent = total > 0
+                ? Math.round((attended / total) * 100) + "%"
+                : "N/A";
+        }
+
+        // ----------------------------------------
+        // ACHIEVEMENTS
+        // ----------------------------------------
+
+        const achievementsDoc = await db
+            .collection("achievements")
+            .doc(user.uid)
+            .get();
+
+        let achievements = [];
+
+        if (achievementsDoc.exists) {
+            achievements = achievementsDoc.data().records || [];
+        }
+
+        const achievementElement =
+            document.getElementById("achievementCount");
+
+        if (achievementElement) {
+            achievementElement.textContent = achievements.length;
+        }
+
+        const verifiedElement =
+            document.getElementById("verifiedAchievements");
+
+        if (verifiedElement) {
+            const verifiedCount = achievements.filter(item =>
+                item.verified === true ||
+                String(item.status || "").toLowerCase() === "verified"
+            ).length;
+
+            verifiedElement.textContent = verifiedCount + " verified";
+        }
+
+        // ----------------------------------------
+        // ACADEMIC RECORDS
+        // ----------------------------------------
+
+        const academicDoc = await db
+            .collection("academicRecords")
+            .doc(user.uid)
+            .get();
+
+        let semesters = [];
+
+        if (academicDoc.exists) {
+            semesters = academicDoc.data().semesters || [];
+        }
+
+        // Use the latest semester's CGPA when available.
+        if (semesters.length > 0) {
+            const sortedSemesters = [...semesters].sort((a, b) => {
+                const getNumber = item => {
+                    const match = String(item.name || "").match(/\d+/);
+                    return match ? Number(match[0]) : 0;
+                };
+
+                return getNumber(b) - getNumber(a);
+            });
+
+            const latestSemester = sortedSemesters[0];
+
+            if (
+                latestSemester.cgpa !== undefined &&
+                latestSemester.cgpa !== null &&
+                latestSemester.cgpa !== ""
+            ) {
+                const latestCGPA = Number(latestSemester.cgpa);
+
+                if (Number.isFinite(latestCGPA) && cgpaElement) {
+                    cgpaElement.textContent = latestCGPA.toFixed(2);
+                }
+            }
+        }
+
+        console.log("Mentee dashboard data loaded successfully.");
+
+    } catch (error) {
+        console.error("Could not load dashboard data:", error);
+    }
+}
+        
+  // ========================================
+// FIRESTORE: MENTOR FEEDBACK
+// ========================================
+
+
+function formatFirestoreDate(timestamp) {
+    if (timestamp && typeof timestamp.toDate === "function") {
+        return timestamp.toDate().toLocaleString("en-IN");
+    }
+
+    if (timestamp) {
+        const date = new Date(timestamp);
+
+        if (!Number.isNaN(date.getTime())) {
+            return date.toLocaleString("en-IN");
+        }
+    }
+
+    return "Recently added";
+}
+
+// ========================================
+// IDENTIFY THE SIGNED-IN MENTEE
+// ========================================
+
+async function getCurrentMenteeDocument() {
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+        throw new Error("No authenticated user found.");
+    }
+
+    const userDoc = await db
+        .collection("users")
+        .doc(user.uid)
+        .get();
+
+    if (!userDoc.exists) {
+        throw new Error(
+            "Your account was not found in the users collection."
+        );
+    }
+
+    const role = String(userDoc.data().role || "")
+        .trim()
+        .toLowerCase();
+
+    if (role !== "mentee") {
+        throw new Error(
+            "The signed-in account does not have the mentee role."
+        );
+    }
+
+    const studentDoc = await db
+        .collection("students")
+        .doc(user.uid)
+        .get();
+
+    if (!studentDoc.exists) {
+        throw new Error(
+            "Your student document was not found in Firestore."
+        );
+    }
+
+    return {
+        uid: studentDoc.id,
+        ...studentDoc.data()
+    };
+}
+// ========================================
+// REAL-TIME MENTOR FEEDBACK
+// ========================================
+
+let firestoreFeedback = [];
+let unsubscribeFeedback = null;
+
+function loadMentorFeedback(studentUid) {
+    const container = document.getElementById("latestFeedback");
+    const dateElement = document.getElementById("feedbackDate");
+
+    if (!container || !dateElement) return;
+
+    if (unsubscribeFeedback) {
+        unsubscribeFeedback();
+        unsubscribeFeedback = null;
+    }
+
+    if (!studentUid) {
+        container.textContent = "No mentee profile found.";
+        dateElement.textContent = "Unavailable";
+        return;
+    }
+
+    unsubscribeFeedback = db.collection("mentorFeedback")
+        .where("studentUid", "==", studentUid)
+        .onSnapshot(snapshot => {
+            firestoreFeedback = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            firestoreFeedback.sort((a, b) => {
+                const dateA = a.createdAt?.toMillis?.() || 0;
+                const dateB = b.createdAt?.toMillis?.() || 0;
+                return dateB - dateA;
+            });
+
+            if (firestoreFeedback.length === 0) {
+                container.innerHTML =
+                    '<p class="feedback-text">No feedback received yet.</p>';
+
+                dateElement.textContent = "No feedback yet";
+                return;
+            }
+
+            const latest = firestoreFeedback[0];
+            const message = document.createElement("p");
+
+            message.className = "feedback-text";
+            message.textContent = latest.text || "";
+
+            container.replaceChildren(message);
+            dateElement.textContent =
+                formatFirestoreDate(latest.createdAt);
+
+        }, error => {
+            console.error("Feedback listener failed:", error);
+
+            container.textContent = "Unable to load feedback.";
+            dateElement.textContent = "Error loading feedback";
+        });
+}
+
+// View all feedback from Firestore.
+const feedbackButton = document.getElementById("viewAllFeedback");
+
+if (feedbackButton) {
+    feedbackButton.addEventListener("click", function () {
+        document.getElementById("feedbackModal")?.remove();
+
+        const modal = document.createElement("div");
+        modal.id = "feedbackModal";
+        modal.className = "feedback-modal-overlay";
+
+        const content = document.createElement("div");
+        content.className = "feedback-modal-content";
+
+        const heading = document.createElement("div");
+        heading.className = "feedback-modal-heading";
+
+        const title = document.createElement("h2");
+        title.textContent = "Mentor Feedback";
+
+        const closeButton = document.createElement("button");
+        closeButton.className = "feedback-modal-close";
+        closeButton.textContent = "×";
+        closeButton.setAttribute("aria-label", "Close feedback");
+
+        closeButton.addEventListener("click", () => modal.remove());
+
+        heading.append(title, closeButton);
+
+        const list = document.createElement("div");
+        list.className = "feedback-modal-list";
+
+        if (!firestoreFeedback.length) {
+            const empty = document.createElement("p");
+            empty.textContent = "No mentor feedback available yet.";
+            list.appendChild(empty);
+        } else {
+            firestoreFeedback.forEach(note => {
+                const card = document.createElement("div");
+                card.className = "feedback-modal-card";
+
+                const mentor = document.createElement("h3");
+                mentor.textContent = "Your Mentor";
+
+                const date = document.createElement("p");
+                date.className = "feedback-modal-date";
+                date.textContent = formatFirestoreDate(note.createdAt);
+
+                const message = document.createElement("p");
+                message.className = "feedback-modal-message";
+                message.textContent = note.text || "";
+
+                card.append(mentor, date, message);
+                list.appendChild(card);
+            });
+        }
+
+        content.append(heading, list);
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+
+        modal.addEventListener("click", event => {
+            if (event.target === modal) {
+                modal.remove();
+            }
+        });
+    });
+}
+
+        
+    // ========================================
+// FIRESTORE: MENTOR RECOMMENDATIONS
+// ========================================
+
+// ========================================
+// FIRESTORE: MENTOR RECOMMENDATIONS
+// ========================================
+
+// ========================================
+// REAL-TIME MENTOR RECOMMENDATIONS
+// ========================================
+
+let firestoreRecommendations = [];
+let unsubscribeRecommendations = null;
+
+function loadRecommendations(studentUid) {
+    const container = document.getElementById("recommendationList");
+
+    if (!container) return;
+
+    if (unsubscribeRecommendations) {
+        unsubscribeRecommendations();
+        unsubscribeRecommendations = null;
+    }
+
+    if (!studentUid) {
+        container.textContent = "No mentee profile found.";
+        return;
+    }
+
+    unsubscribeRecommendations = db.collection("recommendations")
+        .where("studentUid", "==", studentUid)
+        .onSnapshot(snapshot => {
+            firestoreRecommendations = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            firestoreRecommendations.sort((a, b) => {
+                const dateA = a.createdAt?.toMillis?.() || 0;
+                const dateB = b.createdAt?.toMillis?.() || 0;
+                return dateB - dateA;
+            });
+
+            if (!firestoreRecommendations.length) {
+                container.innerHTML =
+                    '<p class="empty-dynamic-state">No mentor recommendations yet.</p>';
+                return;
+            }
+
+            container.innerHTML = firestoreRecommendations.map(item => {
+                const status = [
+                    "Pending",
+                    "In Progress",
+                    "Completed"
+                ].includes(item.status)
+                    ? item.status
+                    : "Pending";
+
+                const statusClass =
+                    status === "Completed"
+                        ? "completed"
+                        : status === "In Progress"
+                            ? "progress"
+                            : "pending";
+
+                return `
+                    <div class="recommendation">
+                        <div class="recommendation-content">
+                            <strong>${escapeDashboardHTML(item.title || "Recommendation")}</strong>
+
+                            <span>${escapeDashboardHTML(item.details || "No additional details.")}</span>
+
+                            <small>${escapeDashboardHTML(formatFirestoreDate(item.createdAt))}</small>
+                        </div>
+
+                        <div class="recommendation-status-controls">
+                            <span class="status-badge ${statusClass}">
+                                ${escapeDashboardHTML(status)}
+                            </span>
+
+                            <label class="status-update-label">
+                                Update status
+
+                                <select
+                                    class="recommendation-status-select"
+                                    data-recommendation-id="${escapeDashboardHTML(item.id)}"
+                                    aria-label="Update status for ${escapeDashboardHTML(item.title || "recommendation")}"
+                                >
+                                    <option value="Pending"
+                                        ${status === "Pending" ? "selected" : ""}>
+                                        Pending
+                                    </option>
+
+                                    <option value="In Progress"
+                                        ${status === "In Progress" ? "selected" : ""}>
+                                        In Progress
+                                    </option>
+
+                                    <option value="Completed"
+                                        ${status === "Completed" ? "selected" : ""}>
+                                        Completed
+                                    </option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+        }, error => {
+            console.error(
+                "RECOMMENDATIONS ERROR:",
+                error.code,
+                error.message
+            );
+
+            container.textContent = "Unable to load recommendations.";
+        });
+}
+// Escape values before inserting them into HTML.
+function escapeDashboardHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[character]);
+}
+
+document.addEventListener("change", async function (event) {
+    const select = event.target.closest(".recommendation-status-select");
+
+    if (!select) return;
+
+    const recommendationId = select.dataset.recommendationId;
+    const newStatus = select.value;
+
+    const recommendation = firestoreRecommendations.find(
+        item => item.id === recommendationId
+    );
+
+    if (!recommendation) {
+        alert("Recommendation not found. Please refresh the page.");
+        return;
+    }
+
+    const oldStatus = [
+        "Pending",
+        "In Progress",
+        "Completed"
+    ].includes(recommendation.status)
+        ? recommendation.status
+        : "Pending";
+
+    if (oldStatus === newStatus) return;
+
+    select.disabled = true;
+
+    try {
+        const user = firebase.auth().currentUser;
+
+        if (!user) {
+            throw new Error("Please sign in again.");
+        }
+
+        const reference = db.collection("recommendations")
+            .doc(recommendationId);
+
+        await db.runTransaction(async transaction => {
+            const document = await transaction.get(reference);
+
+            if (!document.exists) {
+                throw new Error("This recommendation no longer exists.");
+            }
+
+            const data = document.data();
+
+            if (data.studentUid !== user.uid) {
+                throw new Error(
+                    "You are not authorised to update this recommendation."
+                );
+            }
+
+            transaction.update(reference, {
+                status: newStatus,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        });
+
+        console.log(
+            "Recommendation status updated:",
+            recommendation.title,
+            newStatus
+        );
+
+    } catch (error) {
+    console.error("Could not update recommendation status:", error);
+
+    alert(
+        "Error: " + (error.code || "unknown") +
+        "\nMessage: " + error.message
+    );
+
+    select.value = oldStatus;
+} finally {
+        select.disabled = false;
+    }
+});
+    // ========================================
+    // RECENT ACTIVITY
+    // ========================================
+
+    async function loadRecentActivity(studentUid) {
+    const container = document.getElementById("recentActivityList");
+
+    if (!container) return;
+
+    if (!studentUid) {
+        container.textContent = "Student profile not found.";
+        return;
+    }
+
+    try {
+        const [feedbackSnapshot, recommendationSnapshot] =
+            await Promise.all([
+                db.collection("mentorFeedback")
+                    .where("studentUid", "==", studentUid)
+                    .get(),
+
+                db.collection("recommendations")
+                    .where("studentUid", "==", studentUid)
+                    .get()
+            ]);
+
+        const activities = [];
+
+        feedbackSnapshot.forEach(doc => {
+            const data = doc.data();
+
+            activities.push({
+                title: "Mentor Feedback Received",
+                description: data.text || "Your mentor shared feedback.",
+                createdAt: data.createdAt
+            });
+        });
+
+        recommendationSnapshot.forEach(doc => {
+            const data = doc.data();
+
+            activities.push({
+                title: "New Mentor Recommendation",
+                description: data.title || "A recommendation was added.",
+                createdAt: data.createdAt
+            });
+        });
+
+        activities.sort((a, b) => {
+            const dateA = a.createdAt?.toMillis?.() || 0;
+            const dateB = b.createdAt?.toMillis?.() || 0;
+
+            return dateB - dateA;
+        });
+
+        if (activities.length === 0) {
+            container.textContent = "No recent activity yet.";
+            return;
+        }
+
+        container.replaceChildren();
+
+        activities.slice(0, 5).forEach(item => {
+            const activity = document.createElement("div");
+            activity.className = "activity";
+
+            const content = document.createElement("div");
+
+            const title = document.createElement("strong");
+            title.textContent = item.title;
+
+            const description = document.createElement("span");
+            description.textContent = item.description;
+
+            const date = document.createElement("small");
+            date.textContent = item.createdAt
+                ? formatFirestoreDate(item.createdAt)
+                : "Recently added";
+
+            content.append(title, description);
+            activity.append(content, date);
+
+            container.appendChild(activity);
+        });
+
+    } catch (error) {
+        console.error("Could not load recent activity:", error);
+
+        container.textContent = "Unable to load recent activity.";
+    }
+}
+
+    // ========================================
+    // INITIALISE AND REFRESH
+    // ========================================
+
+    // ========================================
+// INITIALISE MENTEE DASHBOARD
+// ========================================
+
+// ========================================
+// INITIALISE MENTEE DASHBOARD
+// ========================================
+
+firebase.auth().onAuthStateChanged(async function (user) {
+    if (!user) {
+        window.location.href = "index.html";
+        return;
+    }
+
+    try {
+        const student = await getCurrentMenteeDocument();
+
+        await updateMenteeDashboard(student);
+
+        loadMentorFeedback(student.uid);
+        loadRecommendations(student.uid);
+
+        await loadRecentActivity(student.uid);
+
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+
+    } catch (error) {
+        console.error(
+            "Mentee dashboard initialisation failed:",
+            error.code,
+            error.message
+        );
+
+        document.getElementById("latestFeedback").textContent =
+            "Unable to load feedback.";
+
+        document.getElementById("recommendationList").textContent =
+            "Unable to load recommendations.";
+
+        document.getElementById("recentActivityList").textContent =
+            "Unable to load recent activity.";
+    }
+});
+
+window.addEventListener("focus", async function () {
+    const user = firebase.auth().currentUser;
+
+    if (!user) return;
+
+    try {
+        const student = await getCurrentMenteeDocument();
+
+        await updateMenteeDashboard(student);
+
+        loadMentorFeedback(student.uid);
+        loadRecommendations(student.uid);
+
+        await loadRecentActivity(student.uid);
+
+    } catch (error) {
+        console.error(
+            "Could not refresh dashboard:",
+            error.message
+        );
+    }
+});
+</script>
+
+</body>
+</html>

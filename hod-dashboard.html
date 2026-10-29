@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MentorMate | HOD Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="hod-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>MentorMate</h2>
+                <span>HOD Portal</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="hod-dashboard.html" class="nav-item active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#department" class="nav-item">
+                <i data-lucide="building-2"></i>
+                <span>Department</span>
+            </a>
+
+            <a href="#students" class="nav-item">
+                <i data-lucide="users"></i>
+                <span>Student Records</span>
+            </a>
+
+            <a href="#academics" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>Academic Performance</span>
+            </a>
+
+            <a href="#attendance" class="nav-item">
+                <i data-lucide="calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="#mentoring" class="nav-item">
+                <i data-lucide="target"></i>
+                <span>Mentoring Overview</span>
+            </a>
+
+            <p class="nav-title second-title">PORTALS</p>
+
+            <a href="admin-dashboard.html" class="nav-item">
+                <i data-lucide="shield-check"></i>
+                <span>Admin Portal</span>
+            </a>
+
+
+            <a href="index.html" class="nav-item logout">
+                <i data-lucide="log-out"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            HOD view
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content hod-main">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">DEPARTMENT PORTAL</p>
+
+                <h1>HOD Dashboard</h1>
+
+                <p class="subheading">
+                    Monitor department performance and student progress.
+                </p>
+            </div>
+
+            <div class="mentor-avatar">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-banner">
+
+            <div>
+                <p class="banner-label">DEPARTMENT OVERVIEW</p>
+
+                <h2>Academic excellence starts here.</h2>
+
+                <p>
+                    Review student performance, attendance and mentoring progress.
+                </p>
+            </div>
+
+            <div class="banner-icon">
+                <i data-lucide="building-2"></i>
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon blue">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <div>
+                    <p>Total Students</p>
+                    <h2 id="hodStudentCount">0</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon purple">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <div>
+                    <p>Average CGPA</p>
+                    <h2 id="hodAverageCGPA">—</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon green">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div>
+                    <p>Average Attendance</p>
+                    <h2 id="hodAverageAttendance">—</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon orange">
+                    <i data-lucide="award"></i>
+                </div>
+
+                <div>
+                    <p>Total Achievements</p>
+                    <h2 id="hodAchievementCount">0</h2>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- DEPARTMENT OVERVIEW -->
+        <section class="panel" id="department">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Department Overview</h2>
+
+                    <p>
+                        Department information based on the available student profile.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hod-department-card">
+
+                <div class="hod-department-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+
+                <div class="hod-department-info">
+                    <span>Department</span>
+                    <h2 id="hodDepartmentName">Not specified</h2>
+                    <p id="hodDepartmentDescription">
+                        Department performance summary
+                    </p>
+                </div>
+
+                <span class="hod-status-badge">
+                    Academic overview
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDENT RECORDS -->
+        <section class="panel" id="students">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Student Records</h2>
+                    <p>Review student CGPA and attendance information.</p>
+                </div>
+
+                <label class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="search"
+                        id="hodStudentSearch"
+                        placeholder="Search by name or USN..."
+                        aria-label="Search students"
+                    >
+
+                </label>
+
+            </div>
+
+            <div class="hod-table-wrapper">
+
+                <table class="hod-table">
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>USN</th>
+                            <th>Latest CGPA</th>
+                            <th>Attendance</th>
+                            <th>Achievements</th>
+                            <th>Semesters</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="hodStudentTable">
+
+                        <tr>
+                            <td colspan="6" class="hod-empty">
+                                Loading student records...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="hod-note">
+                Records shown are those available in this browser.
+            </p>
+
+        </section>
+
+
+        <!-- ACADEMIC PERFORMANCE -->
+        <section class="panel" id="academics">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Academic Performance</h2>
+                    <p>Review the student's recorded semester performance.</p>
+                </div>
+
+            </div>
+
+            <div class="hod-academic-grid">
+
+                <article class="hod-academic-card">
+
+                    <div class="hod-academic-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+
+                    <span>Semesters Recorded</span>
+
+                    <h3 id="hodSemesterCount">0</h3>
+
+                </article>
+
+
+                <article class="hod-academic-card">
+
+                    <div class="hod-academic-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+
+                    <span>Latest Semester CGPA</span>
+
+                    <h3 id="hodLatestCGPA">—</h3>
+
+                </article>
+
+
+                <article class="hod-academic-card">
+
+                    <div class="hod-academic-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+
+                    <span>Achievements Recorded</span>
+
+                    <h3 id="hodAcademicAchievements">0</h3>
+
+                </article>
+
+            </div>
+
+            <div id="hodSemesterList" class="hod-semester-list"></div>
+
+        </section>
+
+
+        <!-- ATTENDANCE -->
+        <section class="panel" id="attendance">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Attendance Overview</h2>
+                    <p>Review recorded class attendance.</p>
+                </div>
+
+            </div>
+
+            <div class="hod-attendance-summary">
+
+                <div>
+                    <span>Overall Attendance</span>
+                    <h3 id="hodAttendancePercentage">—</h3>
+                </div>
+
+                <div class="hod-progress-track">
+                    <div
+                        id="hodAttendanceBar"
+                        class="hod-progress-fill"
+                    ></div>
+                </div>
+
+                <p id="hodAttendanceDescription">
+                    No attendance records available.
+                </p>
+
+            </div>
+
+            <div class="hod-table-wrapper">
+
+                <table class="hod-table">
+
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Classes Attended</th>
+                            <th>Total Classes</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="hodAttendanceTable">
+
+                        <tr>
+                            <td colspan="4" class="hod-empty">
+                                No attendance records available.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENTORING OVERVIEW -->
+        <section class="panel" id="mentoring">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Mentoring Overview</h2>
+                    <p>Track recommendations and their completion status.</p>
+                </div>
+
+            </div>
+
+            <div class="hod-mentoring-grid">
+
+                <article class="hod-mentoring-card">
+                    <span>Total Recommendations</span>
+                    <h3 id="hodRecommendationCount">0</h3>
+                </article>
+
+                <article class="hod-mentoring-card">
+                    <span>Completed</span>
+                    <h3 id="hodCompletedRecommendations">0</h3>
+                </article>
+
+                <article class="hod-mentoring-card">
+                    <span>In Progress</span>
+                    <h3 id="hodInProgressRecommendations">0</h3>
+                </article>
+
+                <article class="hod-mentoring-card">
+                    <span>Pending</span>
+                    <h3 id="hodPendingRecommendations">0</h3>
+                </article>
+
+            </div>
+
+            <div
+                id="hodRecommendationList"
+                class="hod-recommendation-list"
+            ></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            MentorMate · HOD Portal
+            <span>Local browser prototype</span>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+
+<script src="hod-dashboard.js"></script>
+
+</body>
+</html>

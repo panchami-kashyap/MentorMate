@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MentorMate | My Profile</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+<div class="dashboard-container">
+
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>MentorMate</h2>
+                <span>Student Portal</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+
+            <a href="mentee-dashboard.html" class="nav-item">
+
+                <i data-lucide="layout-dashboard"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="mentee-profile.html" class="nav-item active">
+
+                <i data-lucide="user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+            <a href="academic-records.html" class="nav-item">
+    <i data-lucide="book-open"></i>
+    <span>Academic Records</span>
+</a>
+
+
+            <a href="attendance.html" class="nav-item">
+    <i data-lucide="calendar-check"></i>
+    <span>Attendance</span>
+</a>
+
+
+            <a href="achievements.html" class="nav-item">
+    <i data-lucide="award"></i>
+    <span>Achievements</span>
+</a>
+
+
+            <p class="nav-title second-title">
+                MENTORING
+            </p>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="message-square"></i>
+
+                <span>Mentor Feedback</span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="target"></i>
+
+                <span>Recommendations</span>
+
+            </a>
+
+
+            <p class="nav-title second-title">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-item">
+
+                <i data-lucide="settings"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <a href="index.html" class="nav-item logout">
+
+                <i data-lucide="log-out"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                PK
+            </div>
+
+            <div class="user-info">
+
+                <strong>Panchami Kashyap</strong>
+
+                <span>Mentee</span>
+
+            </div>
+
+            <i data-lucide="more-vertical"></i>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-title">
+
+                <h1>My Profile</h1>
+
+                <p>
+                    Manage your personal and academic information
+                </p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="notification-button">
+
+                    <i data-lucide="bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="header-avatar">
+                        PK
+                    </div>
+
+                    <div>
+
+                        <strong>Panchami Kashyap</strong>
+
+                        <span>ISE • 5th Semester</span>
+
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             PROFILE CONTENT
+             ========================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PROFILE HEADER -->
+
+            <div class="profile-header-card">
+
+                <div class="large-profile-avatar">
+                    PK
+                </div>
+
+
+                <div class="profile-main-info">
+
+                    <h2>
+                        Panchami Kashyap
+                    </h2>
+
+                    <p>
+                        Information Science & Engineering
+                    </p>
+
+                    <div class="profile-tags">
+
+                        <span>
+                            <i data-lucide="hash"></i>
+                            NNM23IS001
+                        </span>
+
+                        <span>
+                            <i data-lucide="graduation-cap"></i>
+                            5th Semester
+                        </span>
+
+                        <span class="verified-tag">
+                            <i data-lucide="badge-check"></i>
+                            Profile Verified
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="edit-profile-button"
+                    id="editProfileBtn"
+                    type="button"
+                >
+
+                    <i data-lucide="pencil"></i>
+
+                    Edit Profile
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 PERSONAL INFORMATION
+                 ========================================= -->
+
+            <div class="profile-section-card">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                        <p>
+                            Your basic personal details
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="user"></i>
+
+                </div>
+
+
+                <div class="profile-grid">
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="field-value">
+                            Panchami Kashyap
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            USN
+                        </label>
+
+                        <div class="field-value">
+                            NNM23IS001
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="field-value">
+                            panchami@example.com
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <div class="field-value">
+                            +91 98765 43210
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <div class="field-value">
+                            Information Science & Engineering
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Semester
+                        </label>
+
+                        <div class="field-value">
+                            5th Semester
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ACADEMIC INFORMATION
+                 ========================================= -->
+
+            <div class="profile-section-card">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Academic Information
+                        </h3>
+
+                        <p>
+                            Your current academic performance
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="book-open"></i>
+
+                </div>
+
+
+                <div class="academic-summary">
+
+
+                    <div class="academic-box">
+
+                        <span>
+                            Current CGPA
+                        </span>
+
+                        <strong>
+                            9.25
+                        </strong>
+
+                    </div>
+
+
+                    <div class="academic-box">
+
+                        <span>
+                            Current SGPA
+                        </span>
+
+                        <strong>
+                            9.40
+                        </strong>
+
+                    </div>
+
+
+                    <div class="academic-box">
+
+                        <span>
+                            Attendance
+                        </span>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="academic-box">
+
+                        <span>
+                            Backlogs
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 SKILLS & INTERESTS
+                 ========================================= -->
+
+            <div class="profile-two-column">
+
+
+                <div class="profile-section-card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h3>
+                                Technical Skills
+                            </h3>
+
+                            <p>
+                                Skills and technologies
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="code-2"></i>
+
+                    </div>
+
+
+                    <div class="skill-tags">
+
+                        <span>Java</span>
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>MongoDB</span>
+                        <span>SQL</span>
+                        <span>Unity</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-section-card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h3>
+                                Areas of Interest
+                            </h3>
+
+                            <p>
+                                Your career interests
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="heart"></i>
+
+                    </div>
+
+
+                    <div class="skill-tags">
+
+                        <span>Web Development</span>
+                        <span>UI/UX</span>
+                        <span>AR/VR</span>
+                        <span>Digital Health</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ACHIEVEMENTS
+                 ========================================= -->
+
+            <div class="profile-section-card">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Achievements & Certifications
+                        </h3>
+
+                        <p>
+                            Verified achievements and certifications
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="award"></i>
+
+                </div>
+
+
+                <div class="achievement-list" id="achievementList">
+
+    <div class="achievement-item">
+
+        <div class="achievement-icon">
+            <i data-lucide="badge-check"></i>
+        </div>
+
+        <div>
+            <strong>AWS Cloud Practitioner</strong>
+
+            <span>
+                Amazon Web Services • 2026
+            </span>
+        </div>
+
+        <span class="verified-badge">
+            Verified
+        </span>
+
+    </div>
+
+
+    <div class="achievement-item">
+
+        <div class="achievement-icon">
+            <i data-lucide="trophy"></i>
+        </div>
+
+        <div>
+            <strong>UDAL Fellowship — Top 20</strong>
+
+            <span>
+                Fellowship Selection • 2025
+            </span>
+        </div>
+
+        <span class="verified-badge">
+            Verified
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- PROJECTS SECTION -->
+
+<div class="profile-section-card">
+
+    <div class="section-heading">
+        <div>
+            <h3>Projects</h3>
+            <p>Your academic and personal projects</p>
+        </div>
+
+        <i data-lucide="folder-kanban"></i>
+    </div>
+
+    <div id="projectsList" class="achievement-list"></div>
+
+</div>
+
+<!-- INTERNSHIPS SECTION -->
+
+<div class="profile-section-card">
+
+    <div class="section-heading">
+        <div>
+            <h3>Internships & Experience</h3>
+            <p>Your professional experience</p>
+        </div>
+
+        <i data-lucide="briefcase-business"></i>
+    </div>
+
+    <div id="internshipsList" class="achievement-list"></div>
+
+</div>
+
+            <!-- =========================================
+                 PROFILE ACTIONS
+                 ========================================= -->
+
+            <div class="profile-actions">
+
+                <button
+                    class="cancel-button"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="save-button"
+                    type="button"
+                >
+
+                    <i data-lucide="save"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================
+     EDIT PROFILE MODAL
+     ========================================= -->
+
+<div class="modal-overlay" id="editProfileModal">
+
+    <div class="profile-modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+                <p>
+                    Update your personal and academic information
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeModalBtn"
+                type="button"
+            >
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="editProfileForm">
+
+
+            <!-- =========================================
+                 PERSONAL INFORMATION
+                 ========================================= -->
+
+            <div class="modal-section">
+
+                <h3>
+                    Personal Information
+                </h3>
+
+
+                <div class="modal-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editFullName"
+                            value="Panchami Kashyap"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            USN
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editUSN"
+                            value="NNM23IS001"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                            value="panchami@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="editPhone"
+                            value="+91 98765 43210"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <select id="editDepartment">
+
+                            <option selected>
+                                Information Science & Engineering
+                            </option>
+
+                            <option>
+                                Computer Science & Engineering
+                            </option>
+
+                            <option>
+                                Artificial Intelligence
+                            </option>
+
+                            <option>
+                                Electronics & Communication
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Semester
+                        </label>
+
+                        <select id="editSemester">
+
+                            <option>
+                                3rd Semester
+                            </option>
+
+                            <option>
+                                4th Semester
+                            </option>
+
+                            <option selected>
+                                5th Semester
+                            </option>
+
+                            <option>
+                                6th Semester
+                            </option>
+
+                            <option>
+                                7th Semester
+                            </option>
+
+                            <option>
+                                8th Semester
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ACADEMIC INFORMATION
+                 ========================================= -->
+
+            <div class="modal-section">
+
+                <h3>
+                    Academic Information
+                </h3>
+
+
+                <div class="modal-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Current CGPA
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editCGPA"
+                            value="9.25"
+                            min="0"
+                            max="10"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Current SGPA
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editSGPA"
+                            value="9.40"
+                            min="0"
+                            max="10"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Attendance (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editAttendance"
+                            value="92"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Number of Backlogs
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editBacklogs"
+                            value="0"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 SKILLS & INTERESTS
+                 ========================================= -->
+
+            <div class="modal-section">
+
+                <h3>
+                    Skills & Interests
+                </h3>
+
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Technical Skills
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editSkills"
+                        value="Java, React, JavaScript, HTML/CSS, MongoDB, SQL, Unity"
+                        placeholder="Enter skills separated by commas"
+                    >
+
+                </div>
+
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Areas of Interest
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editInterests"
+                        value="Web Development, UI/UX, AR/VR, Digital Health"
+                        placeholder="Enter your areas of interest"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ADDITIONAL INFORMATION
+                 ========================================= -->
+
+            <div class="modal-section">
+
+                <h3>
+                    Additional Information
+                </h3>
+
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Internships
+                    </label>
+
+                    <textarea
+                        id="editInternships"
+                        placeholder="Mention your internships and experience..."
+                    >AR/VR Research Internship - Nitte Centre of Excellence for Applied Artificial Intelligence</textarea>
+
+                </div>
+
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Projects
+                    </label>
+
+                    <textarea
+                        id="editProjects"
+                        placeholder="Mention your academic or personal projects..."
+                    >Planify - Full Stack Project Management Application
+VR Science Lab
+Financial Literacy Platform</textarea>
+
+                </div>
+
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Achievements & Certifications
+                    </label>
+
+                    <textarea
+                        id="editAchievements"
+                        placeholder="Mention your achievements and certifications..."
+                    >AWS Cloud Practitioner
+UDAL Fellowship - Top 20 Selection</textarea>
+
+                </div>
+
+            </div>
+<!-- MENTOR INFORMATION (READ-ONLY) -->
+<div class="modal-section">
+    <h3>Assigned Mentor</h3>
+
+    <div class="input-group full-width">
+        <label for="mentorSelect">Your Mentor</label>
+
+        <select id="mentorSelect" disabled>
+            <option value="">Loading assigned mentor...</option>
+        </select>
+
+        <small>
+            Your mentor assignment is managed by the institution
+            and cannot be changed from your profile.
+        </small>
+    </div>
+</div>
+
+
+            <!-- =========================================
+                 MODAL ACTIONS
+                 ========================================= -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelEditBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+
+                    <i data-lucide="save"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Configuration -->
+<script src="firebase.js"></script>
+
+<!-- Existing MentorMate Data -->
+<script src="mentormate-data.js"></script>
+
+<script>
+// ========================================
+// MENTORMATE PROFILE
+// FIRESTORE INTEGRATION
+// ========================================
+
+lucide.createIcons();
+
+const editProfileBtn = document.getElementById("editProfileBtn");
+const editProfileModal = document.getElementById("editProfileModal");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const cancelEditBtn = document.getElementById("cancelEditBtn");
+const editProfileForm = document.getElementById("editProfileForm");
+const mentorSelect = document.getElementById("mentorSelect");
+
+let currentStudent = null;
+
+// ========================================
+// HELPER FUNCTIONS
+// ========================================
+
+function splitItems(value) {
+    if (Array.isArray(value)) {
+        return value.map(item => String(item).trim()).filter(Boolean);
+    }
+
+    return String(value || "")
+        .split(/\n|,/)
+        .map(item => item.trim())
+        .filter(Boolean);
+}
+
+function displayValue(value) {
+    return value !== undefined && value !== null && value !== ""
+        ? value
+        : "Not provided";
+}
+
+function renderTags(container, items) {
+    container.replaceChildren();
+
+    items.forEach(item => {
+        const tag = document.createElement("span");
+        tag.textContent = item;
+        container.appendChild(tag);
+    });
+}
+
+function renderList(container, items, iconName, description) {
+    container.replaceChildren();
+
+    if (!items.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty-dynamic-state";
+        empty.textContent = "No information added yet.";
+        container.appendChild(empty);
+        return;
+    }
+
+    items.forEach(item => {
+        const titleText = typeof item === "string"
+            ? item
+            : item.title || item.name || "Untitled";
+
+        const subtitleText = typeof item === "string"
+            ? description
+            : item.organisation ||
+              item.organization ||
+              item.description ||
+              description;
+
+        const row = document.createElement("div");
+        row.className = "achievement-item";
+
+        const iconBox = document.createElement("div");
+        iconBox.className = "achievement-icon";
+
+        const icon = document.createElement("i");
+        icon.setAttribute("data-lucide", iconName);
+        iconBox.appendChild(icon);
+
+        const details = document.createElement("div");
+
+        const title = document.createElement("strong");
+        title.textContent = titleText;
+
+        const subtitle = document.createElement("span");
+        subtitle.textContent = subtitleText;
+
+        details.append(title, subtitle);
+        row.append(iconBox, details);
+        container.appendChild(row);
+    });
+}
+
+// ========================================
+// LOAD PROFILE FROM FIRESTORE
+// ========================================
+
+async function loadProfile() {
+    const user = firebase.auth().currentUser;
+
+    if (!user) return;
+
+    try {
+        // Verify the signed-in user's role.
+        const userDoc = await db.collection("users")
+            .doc(user.uid)
+            .get();
+
+        if (!userDoc.exists) {
+            throw new Error("User record not found.");
+        }
+
+        const role = String(userDoc.data().role || "")
+            .trim()
+            .toLowerCase();
+
+        if (role !== "mentee") {
+            throw new Error("Please sign in using your mentee account.");
+        }
+
+        // Read the student's existing Firestore document.
+        const studentDoc = await db.collection("students")
+            .doc(user.uid)
+            .get();
+
+        if (!studentDoc.exists) {
+            throw new Error(
+                "Student document not found for Firebase UID: " + user.uid
+            );
+        }
+
+        currentStudent = {
+            ...studentDoc.data(),
+            uid: studentDoc.id
+        };
+
+        const student = currentStudent;
+
+        // Read academic, attendance and achievement records.
+        const [academicDoc, attendanceDoc, achievementsDoc] =
+            await Promise.all([
+                db.collection("academicRecords").doc(user.uid).get(),
+                db.collection("attendanceRecords").doc(user.uid).get(),
+                db.collection("achievements").doc(user.uid).get()
+            ]);
+
+        const semesters = academicDoc.exists
+            ? academicDoc.data().semesters || []
+            : [];
+
+        const latestSemester = [...semesters].sort((a, b) => {
+            const getNumber = value => {
+                const match = String(value.name || "").match(/\d+/);
+                return match ? Number(match[0]) : 0;
+            };
+
+            return getNumber(b) - getNumber(a);
+        })[0];
+
+        const attendanceRecords = attendanceDoc.exists
+            ? attendanceDoc.data().records || []
+            : [];
+
+        const attended = attendanceRecords.reduce(
+            (sum, record) => sum + (Number(record.attended) || 0),
+            0
+        );
+
+        const total = attendanceRecords.reduce(
+            (sum, record) => sum + (Number(record.total) || 0),
+            0
+        );
+
+        const attendance = total > 0
+            ? Math.round((attended / total) * 100)
+            : Number(student.attendance) || 0;
+
+        const cgpa = student.cgpa ?? "";
+        const sgpa = latestSemester?.sgpa ?? student.sgpa ?? "";
+        const semester = student.semester ||
+            latestSemester?.name ||
+            "Not provided";
+
+        const skills = splitItems(student.skills);
+        const interests = splitItems(student.interests);
+        const projects = splitItems(student.projects);
+        const internships = splitItems(student.internships);
+
+        const achievementRecords = achievementsDoc.exists
+            ? achievementsDoc.data().records || []
+            : [];
+
+        const achievements = achievementRecords.length
+            ? achievementRecords
+            : splitItems(student.achievements);
+
+        // Personal information.
+        const personalValues = [
+            student.fullName,
+            student.usn,
+            student.email || user.email,
+            student.phone,
+            student.department,
+            semester
+        ];
+
+        document.querySelectorAll(".profile-field").forEach((field, index) => {
+            const value = field.querySelector(".field-value");
+
+            if (value) {
+                value.textContent = displayValue(personalValues[index]);
+            }
+        });
+
+        // Profile header.
+        document.querySelector(".profile-main-info h2").textContent =
+            displayValue(student.fullName);
+
+        document.querySelector(".profile-main-info p").textContent =
+            displayValue(student.department);
+
+        const tags = document.querySelectorAll(".profile-tags span");
+
+        if (tags[0]) {
+            tags[0].replaceChildren();
+
+            const icon = document.createElement("i");
+            icon.setAttribute("data-lucide", "hash");
+
+            tags[0].append(
+                icon,
+                document.createTextNode(" " + displayValue(student.usn))
+            );
+        }
+
+        if (tags[1]) {
+            tags[1].replaceChildren();
+
+            const icon = document.createElement("i");
+            icon.setAttribute("data-lucide", "graduation-cap");
+
+            tags[1].append(
+                icon,
+                document.createTextNode(" " + semester)
+            );
+        }
+
+        // Academic summary.
+        const academicBoxes = document.querySelectorAll(".academic-box");
+
+        [
+            cgpa !== "" ? Number(cgpa).toFixed(2) : "N/A",
+            sgpa !== "" ? Number(sgpa).toFixed(2) : "N/A",
+            attendance + "%",
+            student.backlogs ?? 0
+        ].forEach((value, index) => {
+            academicBoxes[index].querySelector("strong").textContent = value;
+        });
+
+        // Header.
+        const headerSemester = document.querySelector(".header-profile span");
+
+        if (headerSemester) {
+            headerSemester.textContent = "ISE • " + semester;
+        }
+
+        // Skills and interests.
+        const tagContainers = document.querySelectorAll(".skill-tags");
+
+        renderTags(tagContainers[0], skills);
+        renderTags(tagContainers[1], interests);
+
+        // Achievements, projects and internships.
+        renderList(
+            document.getElementById("achievementList"),
+            achievements,
+            "award",
+            "Achievement / Certification"
+        );
+
+        renderList(
+            document.getElementById("projectsList"),
+            projects,
+            "folder-kanban",
+            "Academic / Personal Project"
+        );
+
+        renderList(
+            document.getElementById("internshipsList"),
+            internships,
+            "briefcase-business",
+            "Internship / Professional Experience"
+        );
+
+        // Fill the edit form with current data.
+        document.getElementById("editFullName").value =
+            student.fullName || "";
+
+        document.getElementById("editUSN").value =
+            student.usn || "";
+
+        document.getElementById("editEmail").value =
+            student.email || user.email || "";
+
+        document.getElementById("editPhone").value =
+            student.phone || "";
+
+        document.getElementById("editDepartment").value =
+            student.department || "Information Science & Engineering";
+
+        document.getElementById("editSemester").value = semester;
+
+        document.getElementById("editCGPA").value = cgpa;
+        document.getElementById("editSGPA").value = sgpa;
+        document.getElementById("editAttendance").value = attendance;
+        document.getElementById("editBacklogs").value =
+            student.backlogs ?? 0;
+
+        document.getElementById("editSkills").value = skills.join(", ");
+        document.getElementById("editInterests").value = interests.join(", ");
+        document.getElementById("editProjects").value = projects.join("\n");
+        document.getElementById("editInternships").value =
+            internships.join("\n");
+
+        document.getElementById("editAchievements").value =
+            splitItems(student.achievements).join("\n");
+
+        await loadAssignedMentor(student.mentorId);
+
+        lucide.createIcons();
+
+        console.log("Profile loaded successfully.");
+
+    } catch (error) {
+        console.error("Profile loading error:", error);
+
+        alert("Unable to load your profile: " + error.message);
+    }
+}
+
+// ========================================
+// ASSIGNED MENTOR — READ ONLY
+// ========================================
+
+async function loadAssignedMentor(mentorId) {
+    mentorSelect.replaceChildren();
+
+    if (!mentorId) {
+        mentorSelect.add(new Option("No mentor assigned", ""));
+        return;
+    }
+
+    try {
+        const mentorDoc = await db.collection("users")
+            .doc(mentorId)
+            .get();
+
+        if (!mentorDoc.exists) {
+            mentorSelect.add(new Option("Assigned mentor", mentorId));
+            return;
+        }
+
+        const mentor = mentorDoc.data();
+
+        const name =
+            mentor.fullName ||
+            mentor.displayName ||
+            mentor.name ||
+            mentor.email ||
+            "Assigned Mentor";
+
+        mentorSelect.add(new Option(name, mentorId));
+
+    } catch (error) {
+        console.error("Mentor loading error:", error);
+        mentorSelect.add(new Option("Assigned mentor", mentorId));
+    }
+}
+
+// ========================================
+// MODAL OPEN/CLOSE
+// ========================================
+
+editProfileBtn.addEventListener("click", () => {
+    editProfileModal.classList.add("show");
+});
+
+function closeModal() {
+    editProfileModal.classList.remove("show");
+}
+
+closeModalBtn.addEventListener("click", closeModal);
+cancelEditBtn.addEventListener("click", closeModal);
+
+editProfileModal.addEventListener("click", event => {
+    if (event.target === editProfileModal) {
+        closeModal();
+    }
+});
+
+// ========================================
+// SAVE PROFILE TO FIRESTORE
+// ========================================
+
+editProfileForm.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    const user = firebase.auth().currentUser;
+
+    if (!user || !currentStudent) {
+        alert("Profile is still loading. Please try again.");
+        return;
+    }
+
+    const saveButton = editProfileForm.querySelector(
+        'button[type="submit"]'
+    );
+
+    saveButton.disabled = true;
+
+    try {
+        const profileData = {
+            fullName: document.getElementById("editFullName").value.trim(),
+            usn: document.getElementById("editUSN").value.trim(),
+            phone: document.getElementById("editPhone").value.trim(),
+            department: document.getElementById("editDepartment").value,
+            semester: document.getElementById("editSemester").value,
+            cgpa: Number(document.getElementById("editCGPA").value),
+            sgpa: Number(document.getElementById("editSGPA").value),
+            attendance: Number(document.getElementById("editAttendance").value),
+            backlogs: Number(document.getElementById("editBacklogs").value),
+            skills: document.getElementById("editSkills").value.trim(),
+            interests: document.getElementById("editInterests").value.trim(),
+            projects: document.getElementById("editProjects").value.trim(),
+            internships: document.getElementById("editInternships").value.trim(),
+            achievements: document.getElementById("editAchievements").value.trim(),
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+        };
+
+        // Keep the existing mentorId and account email unchanged.
+        await db.collection("students")
+            .doc(user.uid)
+            .set(profileData, { merge: true });
+
+        // Keep older pages that use this local profile key working.
+        currentStudent = {
+            ...currentStudent,
+            ...profileData
+        };
+
+        localStorage.setItem(
+            "mentorMateProfile",
+            JSON.stringify(currentStudent)
+        );
+
+        closeModal();
+
+        await loadProfile();
+
+        alert("Profile updated successfully!");
+
+    } catch (error) {
+        console.error("Profile saving error:", error);
+
+        alert("Could not save profile: " + error.message);
+
+    } finally {
+        saveButton.disabled = false;
+    }
+});
+
+// ========================================
+// PAGE INITIALISATION
+// ========================================
+
+firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+        window.location.href = "index.html";
+        return;
+    }
+
+    loadProfile();
+});
+
+// Bottom Cancel button returns to dashboard.
+document.querySelectorAll(".profile-actions .cancel-button")
+    .forEach(button => {
+        button.addEventListener("click", () => {
+            window.location.href = "mentee-dashboard.html";
+        });
+    });
+</script>
+
+</body>
+
+</html>

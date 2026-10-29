@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MentorMate | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>MentorMate</h2>
+                <span>Admin Portal</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="admin-dashboard.html" class="nav-item active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#students" class="nav-item">
+                <i data-lucide="users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="#mentors" class="nav-item">
+                <i data-lucide="user-check"></i>
+                <span>Mentors</span>
+            </a>
+
+            <a href="#records" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>Academic Records</span>
+            </a>
+
+            <a href="#activities" class="nav-item">
+                <i data-lucide="activity"></i>
+                <span>Recent Activity</span>
+            </a>
+
+            <p class="nav-title second-title">PORTALS</p>
+
+<a href="index.html?portal=mentor" class="nav-item portal-link">
+    <i data-lucide="user-round"></i>
+    <span>Open Mentor Dashboard</span>
+</a>
+
+<a href="#students" class="nav-item">
+    <i data-lucide="external-link"></i>
+    <span>View Student Information</span>
+</a>
+
+            <a href="index.html" class="nav-item logout">
+                <i data-lucide="log-out"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            Administrator view
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content admin-main">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">ADMINISTRATION PORTAL</p>
+                <h1>Admin Dashboard</h1>
+                <p class="subheading">
+                    Manage student information and monitor academic records.
+                </p>
+            </div>
+
+            <div class="mentor-avatar">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-banner">
+
+            <div>
+                <p class="banner-label">ADMIN OVERVIEW</p>
+
+                <h2>Everything under control.</h2>
+
+                <p>
+                    Monitor student information and academic progress
+                    from one place.
+                </p>
+            </div>
+
+            <div class="banner-icon">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon blue">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <div>
+                    <p>Total Students</p>
+                    <h2 id="adminStudentCount">0</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon purple">
+                    <i data-lucide="user-check"></i>
+                </div>
+
+                <div>
+                    <p>Total Mentors</p>
+                    <h2 id="adminMentorCount">—</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon green">
+                    <i data-lucide="book-open"></i>
+                </div>
+
+                <div>
+                    <p>Academic Records</p>
+                    <h2 id="adminAcademicCount">0</h2>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-icon orange">
+                    <i data-lucide="award"></i>
+                </div>
+
+                <div>
+                    <p>Achievements</p>
+                    <h2 id="adminAchievementCount">0</h2>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- STUDENT MANAGEMENT -->
+        <section class="panel" id="students">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Student Management</h2>
+                    <p>View student profiles and academic progress.</p>
+                </div>
+
+                <label class="search-box">
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="search"
+                        id="adminStudentSearch"
+                        placeholder="Search by name or USN..."
+                        aria-label="Search students"
+                    >
+                </label>
+
+            </div>
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>USN</th>
+                            <th>Department</th>
+                            <th>Latest CGPA</th>
+                            <th>Attendance</th>
+                            <th>Achievements</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="adminStudentTable">
+
+                        <tr>
+                            <td colspan="7" class="admin-empty">
+                                Loading student records...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="admin-note">
+                Student information is read from records saved in this browser.
+            </p>
+
+        </section>
+
+
+        <!-- MENTOR MANAGEMENT -->
+        <section class="panel" id="mentors">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Mentor Management</h2>
+                    <p>Mentor account information and responsibilities.</p>
+                </div>
+            </div>
+
+            <div class="admin-info-card">
+
+                <div class="admin-info-icon">
+                    <i data-lucide="user-check"></i>
+                </div>
+
+                <div>
+                    <h3>Mentor Portal</h3>
+
+                    <p>
+                        Open the Mentor Portal to review mentoring notes,
+                        recommendations and student progress.
+                    </p>
+
+                    <a href="index.html?portal=mentor" class="primary-button">
+    Open Mentor Dashboard
+</a>
+                </div>
+
+            </div>
+
+            <p class="admin-note">
+                Mentor accounts are not centrally registered yet.
+                A real mentor count will require mentor account data.
+            </p>
+
+        </section>
+
+
+        <!-- ACADEMIC RECORDS -->
+        <section class="panel" id="records">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Academic Records</h2>
+                    <p>Summary of the academic records saved for the student.</p>
+                </div>
+            </div>
+
+            <div class="admin-record-grid">
+
+                <article class="admin-record-card">
+                    <span>Semesters Recorded</span>
+                    <h3 id="adminSemesterCount">0</h3>
+                </article>
+
+                <article class="admin-record-card">
+                    <span>Attendance Records</span>
+                    <h3 id="adminAttendanceCount">0</h3>
+                </article>
+
+                <article class="admin-record-card">
+                    <span>Mentor Notes</span>
+                    <h3 id="adminNotesCount">0</h3>
+                </article>
+
+                <article class="admin-record-card">
+                    <span>Recommendations</span>
+                    <h3 id="adminRecommendationCount">0</h3>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ACTIVITY -->
+        <section class="panel" id="activities">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Activity</h2>
+                    <p>Recent changes recorded in the browser.</p>
+                </div>
+            </div>
+
+            <div id="adminActivityList" class="admin-activity-list">
+                <p class="admin-empty">No recent activity available.</p>
+            </div>
+
+        </section>
+
+
+        <footer class="page-footer">
+            MentorMate · Admin Portal
+            <span>Local browser prototype</span>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- STUDENT DETAILS MODAL -->
+<div id="adminStudentModal" class="detail-modal" aria-hidden="true">
+
+    <div
+        class="detail-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="adminDetailName"
+    >
+
+        <button
+            type="button"
+            class="modal-close"
+            id="adminCloseDetail"
+            aria-label="Close student details"
+        >
+            <i data-lucide="x"></i>
+        </button>
+
+        <p class="eyebrow">STUDENT RECORD</p>
+
+        <h2 id="adminDetailName">Student Details</h2>
+
+        <p id="adminDetailSubtitle" class="detail-subtitle"></p>
+
+        <div id="adminDetailContent" class="detail-content"></div>
+
+    </div>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+<script src="admin-dashboard.js"></script>
+</body>
+</html>

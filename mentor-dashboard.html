@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MentorMate | Mentor Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="mentor-dashboard.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div class="dashboard-container">
+<aside class="sidebar">
+<div class="sidebar-logo"><div class="sidebar-logo-icon"><i data-lucide="graduation-cap"></i></div><div><h2>MentorMate</h2><span>Mentor Portal</span></div></div>
+<nav class="sidebar-nav">
+<p class="nav-title">MAIN MENU</p>
+<a href="mentor-dashboard.html" class="nav-item active"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+<a href="#mentees" class="nav-item"><i data-lucide="users"></i><span>Mentees</span></a>
+<a href="#feedback" class="nav-item"><i data-lucide="message-square"></i><span>Mentor Feedback</span></a>
+<a href="#recommendations" class="nav-item"><i data-lucide="target"></i><span>Recommendations</span></a>
+<p class="nav-title second-title">STUDENT PORTAL</p>
+<a href="mentee-dashboard.html" class="nav-item"><i data-lucide="external-link"></i><span>Mentee Portal</span></a>
+<a href="index.html" class="nav-item logout"><i data-lucide="log-out"></i><span>Logout</span></a>
+</nav><div class="sidebar-footer"><span class="status-dot"></span> Mentor view</div>
+</aside>
+<main class="main-content mentor-main">
+<header class="topbar"><div><p class="eyebrow">MENTOR PORTAL</p><h1>Mentor Dashboard</h1><p class="subheading">Review your mentee's progress and records.</p></div><div class="mentor-avatar"><i data-lucide="user-round"></i></div></header>
+<section class="welcome-banner"><div><p class="banner-label">MENTOR OVERVIEW</p><h2>Student progress, all in one place.</h2>
+    <p>View your assigned mentee's academic records, attendance, achievements and mentoring progress.</p></div><div class="banner-icon"><i data-lucide="graduation-cap"></i></div></section>
+
+<!-- MENTOR STATISTICS -->
+<section class="stats-grid">
+
+    <article class="stat-card">
+        <div class="stat-icon blue">
+            <i data-lucide="users"></i>
+        </div>
+        <div>
+            <p>Total mentees</p>
+            <h2 id="menteeCount">0</h2>
+        </div>
+    </article>
+
+    <article class="stat-card">
+        <div class="stat-icon purple">
+            <i data-lucide="book-open"></i>
+        </div>
+        <div>
+            <p>Semesters recorded</p>
+            <h2 id="semesterCount">0</h2>
+        </div>
+    </article>
+
+    <article class="stat-card">
+        <div class="stat-icon green">
+            <i data-lucide="award"></i>
+        </div>
+        <div>
+            <p>Achievements</p>
+            <h2 id="achievementCount">0</h2>
+        </div>
+    </article>
+
+    <article class="stat-card">
+        <div class="stat-icon orange">
+            <i data-lucide="calendar-check"></i>
+        </div>
+        <div>
+            <p>Overall attendance</p>
+            <h2 id="overallAttendance">—</h2>
+        </div>
+    </article>
+
+</section>
+
+<!-- MENTEE PROGRESS OVERVIEW -->
+<section class="panel progress-overview" id="progressOverview">
+
+    <div class="section-heading">
+        <div>
+            <h2>Mentee Progress Overview</h2>
+            <p>A summary of academic performance and mentoring progress.</p>
+        </div>
+        <span class="progress-live-badge">
+            <span></span> Live overview
+        </span>
+    </div>
+
+    <div class="progress-overview-grid">
+
+        <!-- Academic Performance -->
+        <article class="progress-overview-card">
+            <div class="progress-overview-icon academic">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="progress-overview-label">Latest CGPA</div>
+            <h3 id="progressCGPA">—</h3>
+            <p id="progressSemester">No semester recorded</p>
+        </article>
+
+        <!-- Attendance -->
+        <article class="progress-overview-card">
+            <div class="progress-overview-icon attendance">
+                <i data-lucide="calendar-check"></i>
+            </div>
+            <div class="progress-overview-label">Overall Attendance</div>
+            <h3 id="progressAttendance">—</h3>
+            <div class="progress-track">
+                <div id="progressAttendanceBar" class="progress-fill"></div>
+            </div>
+            <p id="progressAttendanceText">No attendance records</p>
+        </article>
+
+        <!-- Achievements -->
+        <article class="progress-overview-card">
+            <div class="progress-overview-icon achievements">
+                <i data-lucide="award"></i>
+            </div>
+            <div class="progress-overview-label">Achievements</div>
+            <h3 id="progressAchievements">0</h3>
+            <p>Achievements recorded</p>
+        </article>
+
+        <!-- Recommendations -->
+        <article class="progress-overview-card">
+            <div class="progress-overview-icon recommendations">
+                <i data-lucide="target"></i>
+            </div>
+            <div class="progress-overview-label">Recommendations Completed</div>
+            <h3 id="progressRecommendations">0 / 0</h3>
+            <div class="progress-track">
+                <div id="progressRecommendationsBar" class="progress-fill"></div>
+            </div>
+            <p id="progressRecommendationsText">No recommendations yet</p>
+        </article>
+
+    </div>
+</section>
+<section class="panel" id="mentees"><div class="section-heading"><div><h2>My Mentee</h2>
+<p>Your assigned mentee's profile and academic progress.</p></div><label class="search-box"><i data-lucide="search"></i><input id="menteeSearch" type="search" placeholder="Search by name or USN..." aria-label="Search mentees"></label></div><div id="menteeGrid" class="mentee-grid"></div><div id="emptyMentees" class="empty-state" hidden><i data-lucide="users"></i><h3>No mentee profile found</h3></div></section>
+
+
+
+<!-- MENTOR FEEDBACK -->
+<section class="panel" id="feedback">
+    <div class="section-heading">
+        <div>
+            <h2>Mentor Feedback</h2>
+            <p>Provide private feedback to the selected mentee.</p>
+        </div>
+    </div>
+
+    <form id="noteForm" class="note-form">
+        <label for="mentorNote">Feedback</label>
+
+        <textarea
+            id="mentorNote"
+            rows="3"
+            maxlength="2000"
+            placeholder="Write feedback for this mentee..."
+            required
+        ></textarea>
+
+        <div class="note-actions">
+            <small id="noteStatus">
+                Select a mentee to begin.
+            </small>
+
+            <button class="primary-button" type="submit">
+                <i data-lucide="save"></i>
+                Save Feedback
+            </button>
+        </div>
+    </form>
+
+    <div id="notesList" class="notes-list">
+        <p class="empty-dynamic-state">
+            Select a mentee to view feedback.
+        </p>
+    </div>
+</section>
+
+
+<!-- MENTOR RECOMMENDATIONS -->
+<section class="panel" id="recommendations">
+    <div class="section-heading">
+        <div>
+            <h2>Mentor Recommendations</h2>
+            <p>Give guidance to the selected mentee.</p>
+        </div>
+    </div>
+
+    <form id="recommendationForm" class="recommendation-form">
+        <label for="recommendationTitle">
+            Recommendation Title
+        </label>
+
+        <input
+            id="recommendationTitle"
+            type="text"
+            maxlength="120"
+            placeholder="e.g. Complete SQL Certification"
+            required
+        >
+
+        <label for="recommendationDetails">
+            Details (optional)
+        </label>
+
+        <textarea
+            id="recommendationDetails"
+            rows="2"
+            maxlength="500"
+            placeholder="Add guidance or a target..."
+        ></textarea>
+
+        <label for="recommendationStatus">Status</label>
+
+        <select id="recommendationStatus">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+        <div class="note-actions">
+            <small id="recommendationStatusMessage">
+                Select a mentee before saving.
+            </small>
+
+            <button class="primary-button" type="submit">
+                <i data-lucide="plus"></i>
+                Add Recommendation
+            </button>
+        </div>
+    </form>
+
+    <div
+        id="mentorRecommendationsList"
+        class="mentor-recommendations-list"
+    >
+        <p class="empty-dynamic-state">
+            Select a mentee to view recommendations.
+        </p>
+    </div>
+</section>
+<footer class="page-footer">MentorMate · Mentor Portal <span>Firebase-powered dashboard</span></footer></main></div>
+<div id="menteeModal" class="detail-modal" aria-hidden="true"><div class="detail-dialog" role="dialog" aria-modal="true" aria-labelledby="detailName"><button type="button" class="modal-close" id="closeDetail" aria-label="Close details"><i data-lucide="x"></i></button><p class="eyebrow">MENTEE PROFILE</p><h2 id="detailName">Student details</h2><p id="detailSubtitle" class="detail-subtitle"></p><div id="detailContent" class="detail-content"></div></div></div>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- MentorMate Firebase connection -->
+<script src="firebase.js"></script>
+<script src="mentor-dashboard.js"></script>
+</body></html>
